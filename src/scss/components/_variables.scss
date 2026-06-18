@@ -1,0 +1,32 @@
+// ── Цвета ────────────────────────────────────────────────────────────────────
+$brand-primary:   #2c6fad;
+$brand-secondary: #e74c3c;
+$text-color:      #333333;
+$link-color:      $brand-primary;
+
+// ── Типографика ───────────────────────────────────────────────────────────────
+$font-family-base: 'Manrope', Arial, 'Helvetica Neue', sans-serif;
+$font-size-base:   14px;
+$line-height-base: 1.6;
+
+// ── Сетка (Bootstrap 3 дефолт + расширенный контейнер) ───────────────────────
+$grid-columns:             12;
+$grid-gutter-width:        30px;
+$container-large-desktop: (1170px + $grid-gutter-width);
+
+// ── Навбар ────────────────────────────────────────────────────────────────────
+$navbar-height:          50px;
+$navbar-default-bg:      #ffffff;
+$navbar-default-color:   $text-color;
+$navbar-default-border:  #e5e5e5;
+$navbar-default-link-color:        $text-color;
+$navbar-default-link-hover-color:  $brand-primary;
+$navbar-default-link-active-color: $brand-primary;
+
+// ── Кнопки ───────────────────────────────────────────────────────────────────
+$btn-primary-bg:     $brand-primary;
+$btn-primary-border: darken($brand-primary, 5%);
+
+// ── Хлебные крошки ───────────────────────────────────────────────────────────
+$breadcrumb-bg:        #f8f8f8;
+$breadcrumb-separator: '›';

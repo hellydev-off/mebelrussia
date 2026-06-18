@@ -1,0 +1,49 @@
+{# Карточка товара. Ожидает переменную p: { badges, price, old_price, wish, specs } #}
+<div class="pp-card">
+  <div class="pp-card__media">
+    <button class="pp-card__wish{% if p.wish %} pp-card__wish--active{% endif %}" type="button">
+      <svg width="22" height="20" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M11 18.5C11 18.5 1.5 12.5 1.5 6.5A4.5 4.5 0 0 1 11 4.5 4.5 4.5 0 0 1 20.5 6.5C20.5 12.5 11 18.5 11 18.5Z"
+          {% if p.wish %}fill="#6b6b8a" stroke="#6b6b8a"{% else %}stroke="#aab5be"{% endif %}
+          stroke-width="1.5" stroke-linejoin="round"/>
+      </svg>
+    </button>
+    <a href="{{ p.href|default('/product.html') }}" class="pp-card__img-link">
+      <img src="{{ p.img|default('/images/index/product/sofa.png') }}"
+           alt="{{ p.name|default('Товар') }}" class="pp-card__img img-responsive" />
+    </a>
+    <div class="pp-card__badges">
+      {% if 'sale' in p.badges %}<span class="pp-badge pp-badge--sale">-30%</span>{% endif %}
+      {% if 'hit'  in p.badges %}<span class="pp-badge pp-badge--hit">
+        <img class="pp-badge--image" src="/images/index/product/hit.svg" alt=""> Хит</span>{% endif %}
+      {% if 'new'  in p.badges %}<span class="pp-badge pp-badge--new">
+        <img class="pp-badge--image" src="/images/index/product/new.svg" alt="">
+         Новинка</span>{% endif %}
+    </div>
+  </div>
+  <div class="pp-card__body">
+    <p class="pp-card__name">{{ p.name|default('Диван выкатной Осло серый велюр 1200×1950 мм') }}</p>
+    <div class="pp-card__meta">
+      <div class="pp-card__stars">
+        {% for i in 1..5 %}
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M7 1l1.545 3.09L12 4.635l-2.5 2.41.59 3.41L7 8.77l-3.09 1.685.59-3.41L2 4.635l3.455-.545L7 1z" stroke="#e0d5c5" stroke-width="1"/>
+        </svg>
+        {% endfor %}
+      </div>
+      <span class="pp-card__stock">В наличии</span>
+    </div>
+    <ul class="pp-card__specs">
+      {% for spec in p.specs %}
+      <li>
+        <span class="pp-card__spec-name">{{ spec[0] }}</span>
+        <span class="pp-card__spec-val">{{ spec[1] }}</span>
+      </li>
+      {% endfor %}
+    </ul>
+    <div class="pp-card__price">
+      <span class="pp-card__price-new{% if p.old_price %} pp-card__price-new--sale{% endif %}">{{ p.price }} ₽</span>
+      {% if p.old_price %}<span class="pp-card__price-old">{{ p.old_price }} ₽</span>{% endif %}
+    </div>
+  </div>
+</div>

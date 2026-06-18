@@ -1,0 +1,48 @@
+{% extends "layouts/base.twig" %}
+
+{% block title %}Главная — {{ siteName }}{% endblock %}
+
+{% block content %}
+
+<section class="hero-slider">
+  <div class="swiper hero-swiper">
+    <div class="swiper-wrapper">
+
+      <div class="swiper-slide">
+        <div class="hero-slide">
+          <div class="hero-slide__img-wrap">
+            <img src="/images/index/banner.png" alt="" class="hero-slide__img" />
+          </div>
+          
+          
+        </div>
+      </div>
+
+      <div class="swiper-slide">
+        <div class="hero-slide">
+          <div class="hero-slide__img-wrap">
+            <img src="/images/index/banner.png" alt="" class="hero-slide__img" />
+          </div>
+        </div>
+      </div>
+
+      <div class="swiper-slide">
+        <div class="hero-slide">
+          <div class="hero-slide__img-wrap">
+            <img src="/images/index/banner.png" alt="" class="hero-slide__img" />
+          </div>
+          
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+{% include "partials/popular-categories.twig" %}
+{% include "partials/popular-products.twig" %}
+{% include "partials/stock.twig" %}
+{% include "partials/new-products.twig" %}
+{% include "partials/latest-articles.twig" %}
+{% include "partials/about.twig" %}
+{% endblock %}

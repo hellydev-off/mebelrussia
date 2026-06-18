@@ -1,0 +1,58 @@
+{# Off-canvas мобильное меню. Открывается бургером в шапке (data-mobile-menu-open) #}
+<div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+  <div class="mobile-menu__overlay" data-mobile-menu-close></div>
+
+  <aside class="mobile-menu__panel" role="dialog" aria-label="Меню навигации">
+    <div class="mobile-menu__head">
+      <a href="/index.html" class="mobile-menu__logo">
+        <img src="/images/header_logo.png" alt="Мебель из России" />
+      </a>
+      <button class="mobile-menu__close" type="button" data-mobile-menu-close aria-label="Закрыть меню">
+        &times;
+      </button>
+    </div>
+
+    <nav class="mobile-menu__nav">
+      <a href="/index.html" class="mobile-menu__link">Главная</a>
+      <a href="/catalog.html" class="mobile-menu__link">Каталог</a>
+
+      <button class="mobile-menu__group" type="button">
+        О нас <img src="/images/nav_arrow.svg" class="mobile-menu__chevron" alt="" />
+      </button>
+      <div class="mobile-menu__submenu">
+        <a href="/about-company.html">О компании</a>
+        <a href="/contacts.html">Контакты</a>
+      </div>
+
+      <button class="mobile-menu__group" type="button">
+        Доставка и сборка <img src="/images/nav_arrow.svg" class="mobile-menu__chevron" alt="" />
+      </button>
+      <div class="mobile-menu__submenu">
+        <a href="/delivery.html">Доставка</a>
+        <a href="/assembly.html">Сборка</a>
+      </div>
+
+      <button class="mobile-menu__group" type="button">
+        Оплата <img src="/images/nav_arrow.svg" class="mobile-menu__chevron" alt="" />
+      </button>
+      <div class="mobile-menu__submenu">
+        <a href="/payment.html">Оплата</a>
+        <a href="/installment.html">Рассрочка</a>
+      </div>
+
+      <a href="/guarantees.html" class="mobile-menu__link">Гарантии</a>
+      <a href="/catalog.html" class="mobile-menu__link mobile-menu__link--sale">Распродажа</a>
+    </nav>
+
+    <div class="mobile-menu__actions">
+      <a href="/account.html"><img src="/images/nav_user.svg" alt="" /> Войти</a>
+      <a href="/wishlist.html"><img src="/images/nav_heart.svg" alt="" /> Избранное</a>
+      <a href="/cart.html"><img src="/images/nav_basket.svg" alt="" /> Корзина</a>
+    </div>
+
+    <div class="mobile-menu__contacts">
+      <a href="tel:+78127038857" class="mobile-menu__phone">8 (812) 703-88-57</a>
+      <span>Ежедневно, 09:00–20:00</span>
+    </div>
+  </aside>
+</div>

@@ -1,0 +1,73 @@
+// ── Тулбар сортировки/отображения ────────────────────────────────────────────
+.product-filter {
+  background: #f8f8f8;
+  border: 1px solid #e5e5e5;
+  border-radius: 4px;
+  padding: 10px 15px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+
+  .display-options {
+    display: flex;
+    gap: 5px;
+
+    .btn-default.active {
+      background: $brand-primary;
+      color: #fff;
+      border-color: $brand-primary;
+    }
+  }
+
+  .sort-group {
+    margin-left: auto;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+
+    label { margin: 0; white-space: nowrap; }
+    select { width: auto; }
+  }
+}
+
+// ── Боковые колонки (категории, фильтры) ──────────────────────────────────────
+#column-left,
+#column-right {
+  .list-group-item {
+    font-size: 13px;
+    padding: 8px 15px;
+
+    &.active {
+      background: $brand-primary;
+      border-color: $brand-primary;
+    }
+  }
+
+  h5 {
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #555;
+    margin-bottom: 10px;
+  }
+}
+
+// ── Пагинация ─────────────────────────────────────────────────────────────────
+.pagination-wrapper {
+  text-align: center;
+  margin-top: 20px;
+
+  .pagination > li > a,
+  .pagination > li > span {
+    color: $brand-primary;
+    border-color: #ddd;
+  }
+
+  .pagination > .active > a,
+  .pagination > .active > span {
+    background: $brand-primary;
+    border-color: $brand-primary;
+  }
+}

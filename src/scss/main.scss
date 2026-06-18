@@ -1,0 +1,31 @@
+// ── 0. Шрифты ────────────────────────────────────────────────────────────────
+@import 'components/fonts';
+
+// ── 1. Переменные (перед Bootstrap, чтобы переопределить дефолты) ────────────
+@import 'components/variables';
+
+// ── 2. Bootstrap 3 (bootstrap-sass) ─────────────────────────────────────────
+$icon-font-path: '../fonts/bootstrap/'; // путь к glyphicons из dist/css/
+@import '../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap';
+
+// ── 3. Компоненты проекта ────────────────────────────────────────────────────
+@import 'components/alerts';
+@import 'components/section-titles';
+@import 'components/header';
+@import 'components/mobile-menu';
+@import 'components/footer';
+@import 'components/product-card';
+@import 'components/catalog';
+@import 'components/hero-slider';
+@import 'components/popular-products';
+@import 'components/popular-categories';
+@import 'components/about';
+@import 'components/latest-articles';
+@import 'components/mailing';
+@import 'components/about-company';
+@import 'components/guarantees';
+@import 'components/payment';
+@import 'components/installment';
+@import 'components/contacts';
+@import 'components/delivery';
+@import 'components/assembly';

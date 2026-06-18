@@ -1,0 +1,141 @@
+{% extends "layouts/base.twig" %}
+
+{% block title %}Рассрочка на мебель — {{ siteName }}{% endblock %}
+
+{% block content %}
+<section class="inst-page">
+  <div class="container">
+
+    {# Breadcrumbs #}
+    <ol class="breadcrumb co-breadcrumb">
+      <li><a href="/">Главная</a></li>
+      <li class="active">Рассрочка на мебель</li>
+    </ol>
+
+    <h1 class="co-page__h1">Покупка мебели в рассрочку</h1>
+
+    {# ── Banner: Как оформить покупку в рассрочку? ────────────────────────────── #}
+    <div class="inst-banner">
+      <svg class="inst-banner__svg" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1189.5 98.5" preserveAspectRatio="none">
+        <path fill="none" stroke="#ec4d76" stroke-width="1"
+          d="M1172.500,73.500 L24.500,73.500 L0.500,97.500 L0.500,57.500 L0.500,46.500 L0.500,16.500 C0.500,7.664 7.663,0.500 16.500,0.500 L1172.500,0.500 C1181.337,0.500 1188.500,7.664 1188.500,16.500 L1188.500,57.500 C1188.500,66.336 1181.337,73.500 1172.500,73.500 Z"/>
+      </svg>
+      <div class="inst-banner__content">
+        <span class="inst-banner__pink">Как оформить покупку в рассрочку?</span>
+      </div>
+    </div>
+
+    {# ── Steps ────────────────────────────────────────────────────────────────── #}
+    <div class="inst-steps">
+
+      <div class="inst-step">
+        <img src="/images/installment/basket.svg" alt="" class="inst-step__icon">
+        <p class="inst-step__num">Шаг 1</p>
+        <p class="inst-step__title">Выбрать товар</p>
+        <p class="inst-step__desc">Выбрать товар в каталоге нашего магазина</p>
+      </div>
+
+      <div class="inst-steps__chevron" aria-hidden="true">
+        <img src="/images/installment/arrow.svg" alt="">
+      </div>
+
+      <div class="inst-step">
+        <img src="/images/installment/application.svg" alt="" class="inst-step__icon">
+        <p class="inst-step__num">Шаг 2</p>
+        <p class="inst-step__title">Оформить заявку</p>
+        <p class="inst-step__desc">Заполнить заявку и выбрать форму оплаты товара</p>
+      </div>
+
+      <div class="inst-steps__chevron" aria-hidden="true">
+        <img src="/images/installment/arrow.svg" alt="">
+      </div>
+
+      <div class="inst-step">
+        <img src="/images/installment/sms.svg" alt="" class="inst-step__icon">
+        <p class="inst-step__num">Шаг 3</p>
+        <p class="inst-step__title">Дождаться решения банка</p>
+        <p class="inst-step__desc">Решение банка придет по SMS-сообщению. Заявка принимается и рассматривается автоматически (10 мин.)</p>
+      </div>
+
+      <div class="inst-steps__chevron" aria-hidden="true">
+        <img src="/images/installment/arrow.svg" alt="">
+      </div>
+
+      <div class="inst-step">
+        <img src="/images/installment/list.svg" alt="" class="inst-step__icon">
+        <p class="inst-step__num">Шаг 4</p>
+        <p class="inst-step__title">Подписать договор</p>
+        <p class="inst-step__desc">При доставке товара подписывается договор на покупку в рассрочку.</p>
+      </div>
+
+    </div>
+
+    {# ── Banner: Покупка мебели в рассрочку / Оформление меньше чем 30 минут ── #}
+    <div class="inst-banner inst-banner--split">
+      <svg class="inst-banner__svg" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1189.5 98.5" preserveAspectRatio="none">
+        <path fill="none" stroke="#ec4d76" stroke-width="1"
+          d="M1172.500,73.500 L24.500,73.500 L0.500,97.500 L0.500,57.500 L0.500,46.500 L0.500,16.500 C0.500,7.664 7.663,0.500 16.500,0.500 L1172.500,0.500 C1181.337,0.500 1188.500,7.664 1188.500,16.500 L1188.500,57.500 C1188.500,66.336 1181.337,73.500 1172.500,73.500 Z"/>
+      </svg>
+      <div class="inst-banner__content">
+        <span class="inst-banner__pink">Покупка мебели в рассрочку</span>
+        <span class="inst-banner__teal">Оформление меньше чем 30 минут</span>
+      </div>
+    </div>
+
+    {# ── Info grid (2 × 2) ────────────────────────────────────────────────────── #}
+    <div class="inst-info">
+
+      <div class="inst-info__item">
+        <img src="/images/installment/pay.svg" alt="" class="inst-info__icon">
+        <div class="inst-info__text">
+          <span>Получение рассрочки на мебель</span>
+          <strong>до 300 000 рублей</strong>
+        </div>
+      </div>
+
+      <div class="inst-info__item">
+        <img src="/images/installment/calendar.svg" alt="" class="inst-info__icon">
+        <div class="inst-info__text">
+          <span>Срок погашения</span>
+          <strong>от 3 до 12 месяцев</strong>
+        </div>
+      </div>
+
+      <div class="inst-info__item">
+        <img src="/images/installment/tag.svg" alt="" class="inst-info__icon">
+        <div class="inst-info__text">
+          <span>Первоначальный взнос</span>
+          <strong>от 0% до 90%</strong>
+        </div>
+      </div>
+
+      <div class="inst-info__item">
+        <img src="/images/installment/time.svg" alt="" class="inst-info__icon">
+        <div class="inst-info__text">
+          <span>Время оформления</span>
+          <strong>не больше 30 минут</strong>
+        </div>
+      </div>
+
+    </div>
+
+    {# ── Advantages ───────────────────────────────────────────────────────────── #}
+    <div class="inst-advantages">
+      <div class="inst-advantages__text">
+        <h2 class="inst-advantages__title">Преимущества покупки мебели для вас:</h2>
+        <ul class="inst-advantages__list">
+          <li>Простые и понятные условия, удобные услуги, досрочное погашение в любой день без заявлений и пр.;</li>
+          <li>Онлайн-решение по заявке меньше чем за 10&nbsp;минут;</li>
+          <li>Простая и понятная анкета без лишних полей;</li>
+          <li>Выдача по паспорту;</li>
+          <li>Решение банка действует 2 недели.</li>
+        </ul>
+      </div>
+      <div class="inst-advantages__img-col">
+        <img src="/images/installment/advantages.png" alt="Преимущества рассрочки на мебель" class="inst-advantages__img">
+      </div>
+    </div>
+
+  </div>{# /container #}
+</section>
+{% endblock %}

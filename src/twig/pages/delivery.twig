@@ -1,0 +1,169 @@
+{% extends "layouts/base.twig" %}
+
+{% block title %}Доставка мебели — {{ siteName }}{% endblock %}
+
+{% block content %}
+<section class="dl-page">
+  <div class="container">
+
+    {# Breadcrumbs #}
+    <ol class="breadcrumb co-breadcrumb">
+      <li><a href="/">Главная</a></li>
+      <li class="active">Доставка</li>
+    </ol>
+
+    <h1 class="co-page__h1">Доставка мебели</h1>
+
+    {# ── Стоимость доставки по регионам ──────────────────────────────────────── #}
+    <div class="dl-steps">
+
+      <div class="dl-step">
+        <img src="/images/delivery/step1.png" alt="Доставка по Санкт-Петербургу" class="dl-step__img">
+        <p class="dl-step__label">по Санкт-Петербургу:</p>
+        <p class="dl-step__price">1 200 ₽</p>
+      </div>
+
+      <div class="dl-step">
+        <img src="/images/delivery/step2.png" alt="Доставка по Ленинградской области" class="dl-step__img">
+        <p class="dl-step__label">по Ленинградской области:</p>
+        <p class="dl-step__price">от 1 200 ₽</p>
+        <p class="dl-step__sub">40 ₽/км от КАД</p>
+      </div>
+
+      <div class="dl-step">
+        <img src="/images/delivery/step3.png" alt="Доставка по России" class="dl-step__img">
+        <p class="dl-step__label">по России</p>
+        <p class="dl-step__price">индивидуально</p>
+        <p class="dl-step__label">уточняйте по телефону:</p>
+        <p class="dl-step__price">8 (812) 703-88-57</p>
+      </div>
+
+    </div>{# /dl-steps #}
+
+    {# ── Верхняя панель: сроки доставки + подъём на этаж ─────────────────────── #}
+    <div class="dl-info-panel">
+
+      <div class="dl-info-block">
+        <p class="dl-info-block__title">Привезём мебель за:</p>
+        <div class="dl-options">
+          <div class="dl-option">
+            <img src="/images/delivery/delivery1.svg" alt="Быстрая доставка" class="dl-option__icon">
+            <span class="dl-option__value dl-option__value--teal">1 - 3 дня</span>
+            <span class="dl-option__label">если в наличии</span>
+          </div>
+          <div class="dl-option">
+            <img src="/images/delivery/delivery2.svg" alt="Доставка под заказ" class="dl-option__icon">
+            <span class="dl-option__value dl-option__value--teal">до 30 дней</span>
+            <span class="dl-option__label">если под заказ</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="dl-info-block">
+        <p class="dl-info-block__title">Поднимем на этаж</p>
+        <div class="dl-options">
+          <div class="dl-option">
+            <img src="/images/delivery/rise1.svg" alt="Подъём по лестнице" class="dl-option__icon">
+            <span class="dl-option__value dl-option__value--pink">от 100 Р/<sub>этаж</sub></span>
+            <span class="dl-option__label">если пешком</span>
+          </div>
+          <div class="dl-option">
+            <img src="/images/delivery/rise2.svg" alt="Подъём на лифте" class="dl-option__icon">
+            <span class="dl-option__value dl-option__value--pink">от 100 Р</span>
+            <span class="dl-option__label">если на лифте</span>
+          </div>
+        </div>
+        <div class="dl-info-badge">
+          <span class="dl-info-badge__icon" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+              <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+              <path d="M12 8v4M12 16h.01" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+            </svg>
+          </span>
+          <span class="dl-info-badge__text">рассчитывается индивидуально менеджером, зависит от объёма и веса мебели</span>
+        </div>
+      </div>
+
+    </div>{# /dl-info-panel #}
+
+    {# ── Оплата товара ────────────────────────────────────────────────────────── #}
+    <h2 class="dl-section-title">Оплата товара</h2>
+
+    <div class="dl-notice">
+      <span class="dl-notice__icon" aria-hidden="true">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+          <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+          <path d="M12 8v4M12 16h.01" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+        </svg>
+      </span>
+      <span class="dl-notice__text">Оплата 100% стоимости покупки входит в процедуру доставки и выполняется при получении товара.</span>
+    </div>
+
+    <p class="about__text">Напоминаем, что при заказе мебели, отсутствующей в каталогах, или доставке непосредственно с фабрики производителя покупатель вносит 30% от стоимости при оформлении заказа. Оставшиеся 70% от суммы покупки выплачиваются при получении мебели. Услуга доставки доступна после оформления заказа.</p>
+
+    {# ── Оплата доставки ──────────────────────────────────────────────────────── #}
+    <h2 class="dl-section-title">Оплата доставки</h2>
+
+    <ul class="dl-dot-list">
+      <li><span class="dl-teal">Бесплатная доставка мебели в СПб возможна при сумме покупки <strong class="dl-pink">более 30 000 руб.</strong></span></li>
+      <li>За доставку по городу Санкт-Петербург в пределах КАД взимается плата в размере <strong class="dl-pink">1 200 руб.</strong></li>
+      <li>Размер оплаты на маршрутах за пределы КАДа определяется в соответствии с их протяженностью по расценке <strong class="dl-pink">40 руб./км</strong>. В подобных случаях информацию о сумме оплаты рекомендуется предварительно получать у нашего специалиста.</li>
+    </ul>
+
+    <a href="#" class="dl-pdf-link">
+      <img src="/images/delivery/pdf_icon.svg" alt="PDF" class="dl-pdf-link__icon">
+      <span class="dl-pdf-link__text">Скачать Прайс доставки по Ленинградской области</span>
+    </a>
+
+    {# ── Регламент доставки ───────────────────────────────────────────────────── #}
+    <h2 class="dl-section-title">Регламент доставки</h2>
+
+    <p class="about__text">Услуги по доставке мебели по любому маршруту доступны <span class="dl-teal">ежедневно</span> <strong class="dl-pink">с 13.00 до 22.00</strong>. Наш водитель-экспедитор предварительно сделает звонок на телефон, указанный вами в заявке, и сообщит расчетное время прибытия.</p>
+    <p class="about__text dl-teal"><strong>Груз доставляется до подъезда.</strong></p>
+
+    <p class="about__text"><strong>Подъём на этаж:</strong></p>
+    <p class="about__text">По согласованию с менеджером возможен подъём заказа на этаж. Стоимость подъёма определяется с учетом веса и габаритов груза.</p>
+    <p class="about__text dl-teal">Минимальная цена при использовании лифта 100 руб.</p>
+    <p class="about__text dl-pink">При невозможности использовать лифт минимальная цена 100 руб. за каждый этаж.</p>
+
+    {# ── Сроки доставки ───────────────────────────────────────────────────────── #}
+    <h2 class="dl-section-title">Сроки доставки</h2>
+
+    <p class="about__text">Мебель с отметкой <span class="dl-teal">«есть в наличии»</span> будет доставлена в срок <strong class="dl-pink">до трёх дней.</strong></p>
+    <p class="about__text"><span class="dl-teal">Индивидуальный заказ</span> поступит к вам <strong class="dl-pink">в течение 30 дней.</strong></p>
+    <p class="about__text">Более полную информацию вы получите от менеджера при оформлении заказа.</p>
+
+    {# ── Самовывоз ────────────────────────────────────────────────────────────── #}
+    <h2 class="dl-section-title">Самовывоз</h2>
+
+    <p class="about__text">В интернет-магазине «Мебель из России» созданы все условия удобного самовывоза мебели. Вам достаточно уведомить нашего менеджера и <span class="dl-pink">оплатить 600 руб. в пункте самовывоза. Пункты работают без выходных с 11.00 до 20.00 и расположены:</span></p>
+
+    <ul class="dl-dot-list">
+      <li>Метро "Академическая", пр. Науки, д.21к1, ТЦ «Торговый двор», 2 этаж, секция №20</li>
+      <li>г. Санкт-Петербург, Зины Портновой д 32 ТЦ Огни города, 2-й этаж отдел №14</li>
+      <li>Метро "Пролетарская", Октябрьская наб 104 к.2 лит. П</li>
+    </ul>
+
+    {# ── Доставка по России ───────────────────────────────────────────────────── #}
+    <div class="dl-russia">
+      <div class="dl-russia__text">
+        <h2 class="dl-section-title">Доставка по России</h2>
+        <p class="about__text">Доставка товаров в другие регионы РФ осуществляется через транспортные компании, после поступления 100% предоплаты стоимости заказанного товара. Стоимость доставки зависит от расстояния до Вашего населенного пункта, объёма и веса товара, расчёт точной стоимости доставки Вы можете запросить у транспортной компании или у менеджера по телефону или электронной почте.</p>
+        <div class="dl-notice">
+          <span class="dl-notice__icon" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+              <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+              <path d="M12 8v4M12 16h.01" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+            </svg>
+          </span>
+          <span class="dl-notice__text">Работаем со всеми Транспортными компаниями!</span>
+        </div>
+      </div>
+      <div class="dl-russia__img-col">
+        <img src="/images/delivery/car.png" alt="Доставка по России" class="dl-russia__img">
+      </div>
+    </div>
+
+  </div>{# /container #}
+</section>
+{% endblock %}

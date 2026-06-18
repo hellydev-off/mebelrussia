@@ -1,0 +1,236 @@
+{% extends "layouts/base.twig" %}
+
+{% block title %}Контактная информация — {{ siteName }}{% endblock %}
+
+{% block head %}
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+{% endblock %}
+
+{% block content %}
+<section class="ct-page">
+  <div class="container">
+
+    {# Breadcrumbs #}
+    <ol class="breadcrumb co-breadcrumb">
+      <li><a href="/">Главная</a></li>
+      <li class="active">Контактная информация</li>
+    </ol>
+
+    <h1 class="co-page__h1">Контактная информация</h1>
+
+    {# ── Main section: stores list + map ──────────────────────────────────────── #}
+    <div class="ct-main">
+
+      {# Left: store list #}
+      <div class="ct-stores">
+
+        <div class="ct-store">
+          <div class="ct-store__head">
+            <span class="ct-store__pin" aria-hidden="true">
+               <img src="/images/contact/map.svg" alt="">
+            </span>
+            <div class="ct-store__head-text">
+              <span class="ct-store__name">ул. Зины Портновой 32</span>
+              <span class="ct-store__hours">Ежедневно: 11:00 – 20:00</span>
+            </div>
+          </div>
+          <p class="ct-store__desc">г. Санкт-Петербург, ТЦ Огни города, 2 этаж – отдел №12</p>
+          <div class="ct-store__metro">
+            <img src="/images/contact/redmetro.svg" alt="">
+            <span class="ct-store__metro-text">м. Ленинский проспект (1,1 км)</span>
+          </div>
+          <div class="ct-store__phones">
+            <span class="ct-store__phone-icon" aria-hidden="true">
+                              <img src="/images/contact/phone.svg" alt="">
+            </span>
+            <div class="ct-store__phone-list">
+              <a href="tel:88127038857" class="ct-store__phone">8 (812) 703-88-57</a>
+              <a href="tel:89313667963" class="ct-store__phone">8 (931) 366-79-63</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="ct-store">
+          <div class="ct-store__head">
+                      <img src="/images/contact/map.svg" alt="">
+            <div class="ct-store__head-text">
+              <span class="ct-store__name">Октябрьская наб 104 к.2 лит. П</span>
+              <span class="ct-store__hours">Ежедневно: 11:00 – 20:00</span>
+            </div>
+          </div>
+          <p class="ct-store__desc">г. Санкт-Петербург, Октябрьская наб 104 к.2 лит. П</p>
+          <div class="ct-store__metro">
+             <img src="/images/contact/greenmetro.svg" alt="">
+            <span class="ct-store__metro-text">м. Пролетарская (1,1 км)</span>
+          </div>
+          <div class="ct-store__phones">
+            <span class="ct-store__phone-icon" aria-hidden="true">
+                              <img src="/images/contact/phone.svg" alt="">
+            </span>
+            <div class="ct-store__phone-list">
+              <a href="tel:88127038857" class="ct-store__phone">8 (812) 703-88-57</a>
+              <a href="tel:89313667963" class="ct-store__phone">8 (931) 366-79-63</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="ct-store">
+          <div class="ct-store__head">
+                     <img src="/images/contact/map.svg" alt="">
+            </span>
+            <div class="ct-store__head-text">
+              <span class="ct-store__name">Привокзальная пл. д.3</span>
+              <span class="ct-store__hours">Ежедневно: 11:00 – 20:00</span>
+            </div>
+          </div>
+          <p class="ct-store__desc">п. Мурино 2 этаж, секция 221 1</p>
+          <div class="ct-store__metro">
+              <img src="/images/contact/redmetro.svg" alt="">
+            <span class="ct-store__metro-text">м. Девяткино (1,1 км)</span>
+          </div>
+          <div class="ct-store__phones">
+            <span class="ct-store__phone-icon" aria-hidden="true">
+                        <img src="/images/contact/phone.svg" alt="">
+            </span>
+            <div class="ct-store__phone-list">
+              <a href="tel:88127038857" class="ct-store__phone">8 (812) 703-88-57</a>
+              <a href="tel:89313667963" class="ct-store__phone">8 (931) 366-79-63</a>
+            </div>
+          </div>
+        </div>
+
+      </div>{# /ct-stores #}
+
+      {# Right: Leaflet map #}
+      <div class="ct-map">
+        <div id="ct-map-leaflet"></div>
+      </div>
+
+    </div>{# /ct-main #}
+
+    {# ── Bottom section: Реквизиты + Заказать звонок ──────────────────────────── #}
+    <div class="ct-bottom">
+
+      {# Реквизиты #}
+      <div class="ct-req-block">
+        <h2 class="ct-section-title">Реквизиты</h2>
+        <div class="ct-req-table">
+          <div class="ct-req-table__row">
+            <span class="ct-req-table__label">ИП</span>
+            <span class="ct-req-table__value">Дмитриев Юрий Сергеевич</span>
+          </div>
+          <div class="ct-req-table__row">
+            <span class="ct-req-table__label">ИНН</span>
+            <span class="ct-req-table__value">780433269058</span>
+          </div>
+          <div class="ct-req-table__row">
+            <span class="ct-req-table__label">ОГРНИП</span>
+            <span class="ct-req-table__value">321784700216031</span>
+          </div>
+          <div class="ct-req-table__row">
+            <span class="ct-req-table__label">Телефон</span>
+            <span class="ct-req-table__value">+7 (812) 988-90-37</span>
+          </div>
+          <div class="ct-req-table__row ct-req-table__row--last">
+            <span class="ct-req-table__label">Почта</span>
+            <span class="ct-req-table__value">
+              <a href="mailto:zakaz@mebelrussian.ru" class="ct-req-table__link">zakaz@mebelrussian.ru</a>
+            </span>
+          </div>
+        </div>
+      </div>
+
+      {# Заказать звонок #}
+      <div class="ct-callback-block">
+        <h2 class="ct-section-title">Заказать звонок</h2>
+        <form class="ct-form" action="#" method="post">
+
+          <div class="ct-form__row ct-form__row--3col">
+            <input type="text"  class="ct-form__input" placeholder="Ваше имя">
+            <input type="email" class="ct-form__input" placeholder="Ваша почта">
+            <input type="tel"   class="ct-form__input" placeholder="Ваш телефон">
+          </div>
+
+          <div class="ct-form__row">
+            <textarea class="ct-form__input ct-form__textarea" placeholder="Комментарий" rows="3"></textarea>
+          </div>
+
+          <div class="ct-form__row ct-form__row--captcha">
+            <input type="text" class="ct-form__input" placeholder="Код с картинки">
+            <div class="ct-form__captcha-img" aria-hidden="true">
+              <span class="ct-form__captcha-text">Ab3K9</span>
+            </div>
+          </div>
+
+          <label class="ct-form__check">
+            <input type="checkbox" class="ct-form__checkbox" checked>
+            <span class="ct-form__check-text">
+              Нажимая на кнопку «Отправить» вы соглашаетесь с условиями
+              <a href="#" class="ct-form__check-link">персональной обработки и политикой конфиденциальности</a>
+            </span>
+          </label>
+
+          <button type="submit" class="ct-form__submit">
+            Отправить
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M5 12h14M13 6l6 6-6 6" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+
+        </form>
+      </div>
+
+    </div>{# /ct-bottom #}
+
+  </div>{# /container #}
+</section>
+{% endblock %}
+
+{% block scripts %}
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script>
+(function () {
+  var map = L.map('ct-map-leaflet').setView([59.95, 30.33], 11);
+
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+    maxZoom: 18,
+  }).addTo(map);
+
+  var pinIcon = L.divIcon({
+    html: '<svg width="28" height="36" viewBox="0 0 28 36" fill="none" xmlns="http://www.w3.org/2000/svg">'
+        + '<path d="M14 0C6.27 0 0 6.27 0 14c0 9.63 14 22 14 22s14-12.37 14-22C28 6.27 21.73 0 14 0z" fill="#3dacd2"/>'
+        + '<circle cx="14" cy="14" r="5" fill="#fff"/>'
+        + '</svg>',
+    iconSize:    [28, 36],
+    iconAnchor:  [14, 36],
+    popupAnchor: [0, -38],
+    className:   '',
+  });
+
+  var stores = [
+    {
+      coords: [59.8621, 30.2619],
+      name:   'ул. Зины Портновой 32',
+      desc:   'ТЦ Огни города, 2 этаж – отдел №12<br>Ежедневно 11:00 – 20:00',
+    },
+    {
+      coords: [59.8783, 30.4506],
+      name:   'Октябрьская наб 104 к.2 лит. П',
+      desc:   'г. Санкт-Петербург<br>Ежедневно 11:00 – 20:00',
+    },
+    {
+      coords: [60.0497, 30.4428],
+      name:   'Привокзальная пл. д.3',
+      desc:   'п. Мурино, 2 этаж, секция 221<br>Ежедневно 11:00 – 20:00',
+    },
+  ];
+
+  stores.forEach(function (store) {
+    L.marker(store.coords, { icon: pinIcon })
+      .addTo(map)
+      .bindPopup('<strong>' + store.name + '</strong><br>' + store.desc);
+  });
+}());
+</script>
+{% endblock %}

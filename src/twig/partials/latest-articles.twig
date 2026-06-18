@@ -1,0 +1,33 @@
+<section class="articles">
+  <div class="container">
+
+    <div class="articles__head">
+      <h2 class="articles__title">Последние Статьи</h2>
+      <a href="/articles.html" class="articles__btn">Все статьи</a>
+    </div>
+
+    <div class="articles__grid">
+
+      {% set articles = [
+        { title: 'Какую выбрать обивку дивана?', text: 'Очень важным при выборе дивана является материал обивки, так как для разных условий эксплуатации мебели он может быть разным....' },
+        { title: 'Какую выбрать обивку дивана?', text: 'Очень важным при выборе дивана является материал обивки, так как для разных условий эксплуатации мебели он может быть разным....' },
+        { title: 'Какую выбрать обивку дивана?', text: 'Очень важным при выборе дивана является материал обивки, так как для разных условий эксплуатации мебели он может быть разным....' }
+      ] %}
+
+      {% for a in articles %}
+      <a href="#" class="article-card">
+        <div class="article-card__img-wrap">
+          <img src="/images/index/article/article.png" alt="{{ a.title }}" class="article-card__img" />
+          <div class="article-card__overlay">
+            <span class="article-card__read-btn">Читать далее &nearr;</span>
+          </div>
+        </div>
+        <h3 class="article-card__title">{{ a.title }}</h3>
+        <p class="article-card__text">{{ a.text }}</p>
+      </a>
+      {% endfor %}
+
+    </div>
+
+  </div>
+</section>

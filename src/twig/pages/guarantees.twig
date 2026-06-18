@@ -1,0 +1,85 @@
+{% extends "layouts/base.twig" %}
+
+{% block title %}Гарантии — {{ siteName }}{% endblock %}
+
+{% block content %}
+<section class="gr-page">
+  <div class="container">
+
+    {# Breadcrumbs #}
+    <ol class="breadcrumb co-breadcrumb">
+      <li><a href="/">Главная</a></li>
+      <li class="active">Гарантии</li>
+    </ol>
+
+    <h1 class="co-page__h1">Гарантии</h1>
+
+    {# ── Intro: badge + text card ── #}
+    <div class="gr-intro">
+      <div class="gr-intro__badge">
+        <img src="/images/index/about/guarantee.png" alt="2 года гарантии" />
+      </div>
+      <div class="gr-intro__card">
+        <p class="about__text">
+          <strong>Интернет-магазин «Мебель из России»</strong> осуществляет продажу мебели в Санкт-Петербурге
+          с гарантией производителя. Все наши товары проходят обязательную сертификацию,
+          а <strong>гарантия составляет от 2 лет в зависимости от завода-изготовителя</strong>
+          и предназначения товара. Заявки на гарантийное обслуживание принимаются нами на протяжении
+          действия всего гарантийного срока. Мы ценим наших клиентов и стараемся всегда идти
+          навстречу покупателю, предлагая наиболее выгодные условия покупки и сервиса.
+        </p>
+      </div>
+    </div>
+
+    {# ── Important conditions: text left + image right ── #}
+    <div class="gr-section gr-section--img-right">
+      <div class="gr-section__text">
+        <h2 class="about__title">Важные условия</h2>
+        <p class="about__text">
+          Началом гарантийного обслуживания считается момент передачи товара покупателю. Если вы хотите
+          обратиться с гарантийным случаем, необходимо представить документ, подтверждающий покупку
+          продукции нашего магазина. Кроме того, товар должен иметь полную комплектацию. Важно отметить,
+          что физические повреждения мебели (порванная обивка, поцарапанные фасады и т. п.) полученные
+          в ходе эксплуатации изделия не являются гарантийным случаем.
+        </p>
+      </div>
+      <div class="gr-section__img-col">
+        <img src="/images/guarantees/conditions.png" alt="Важные условия" class="gr-section__img" />
+      </div>
+    </div>
+
+    {# ── How to file a claim: image left + text right ── #}
+    <div class="gr-section gr-section--img-left gr-section--last">
+      <div class="gr-section__img-col">
+        <img src="/images/guarantees/bid.png" alt="Как направить заявку" class="gr-section__img" />
+      </div>
+      <div class="gr-section__text">
+        <h2 class="about__title">Как направить заявку</h2>
+        <p class="about__text">
+          Свои претензии вы можете направлять на электронный почтовый адрес отдела гарантии нашего
+          магазина: <a href="mailto:help@mebelrussian.ru">help@mebelrussian.ru</a>. К сообщению
+          необходимо приложить номер заказа, товарный чек, описание брака с вложенной фотографией
+          поврежденной детали, а также фото фабричной этикетки с упаковки изделия и/или комплектовочную
+          ведомость, схему сборки, с отмеченными на ней поврежденными деталями. Наши менеджеры
+          обработают поступившую заявку в течение пяти рабочих дней, после чего с вами свяжутся для
+          обсуждения и решения проблемы.
+        </p>
+      </div>
+    </div>
+
+    {# ── Phone banner ── #}
+    <div class="gr-phone-banner">
+      <p class="gr-phone-banner__text">
+        Остались вопросы? Позвоните нам по номеру телефона и наши менеджеры дадут исчерпывающую
+        консультацию по гарантийному обслуживанию товаров магазина «Мебель из России».
+      </p>
+      <div class="gr-phone-banner__phones">
+        <a href="tel:+78129889837" class="gr-phone-banner__phone">+7 (812) 988-98-37</a>
+        <span class="gr-phone-banner__divider">|</span>
+        <a href="tel:+79313667963" class="gr-phone-banner__phone">+7-931-366-79-63</a>
+      </div>
+    </div>
+
+  </div>{# /container #}
+</section>
+{% endblock %}

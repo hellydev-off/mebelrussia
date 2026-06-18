@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}{{ siteName }}{% endblock %}</title>
+
+  {# Vendor CSS #}
+  <link rel="stylesheet" href="/css/swiper-bundle.min.css">
+  {# Проектные стили (компилируется из src/scss/main.scss) #}
+  <link rel="stylesheet" href="/css/main.css">
+
+  {% block head %}{% endblock %}
+</head>
+<body class="{{ bodyClass|default('') }}">
+
+  {# Контейнер AJAX-уведомлений OpenCart (cart.add → .alert-success/.alert-danger) #}
+  <div id="alert" aria-live="polite"></div>
+
+  {% include "partials/topbar.twig" %}
+
+
+  {% include "partials/header.twig" %}
+  {% include "partials/mobile-menu.twig" %}
+
+  <main id="main-content">
+    {% block content %}{% endblock %}
+  </main>
+
+
+  {% include "partials/mailing.twig" %}
+  {% include "partials/footer.twig" %}
+
+  <script src="/js/bundle.js"></script>
+  {% block scripts %}{% endblock %}
+
+</body>
+</html>

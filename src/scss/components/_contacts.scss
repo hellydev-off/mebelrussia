@@ -1,0 +1,423 @@
+// ── Страница контактов ────────────────────────────────────────────────────────
+
+$ct-teal: #3dacd2;
+$ct-dark-bg: #5f9ec5;
+$ct-label-mute: rgba(255, 255, 255, 0.65);
+$ct-input-bg: #f0f5fb;
+
+// ── Page wrapper ──────────────────────────────────────────────────────────────
+.ct-page {
+  padding: 36px 0 60px;
+}
+
+// ── Section titles ────────────────────────────────────────────────────────────
+.ct-section-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: $text-color;
+  margin: 0 0 24px;
+  line-height: 1.25;
+}
+
+// ── Main two-col grid (stores list | map) ─────────────────────────────────────
+.ct-main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  align-items: start;
+  margin-bottom: 48px;
+}
+
+// ── Stores list ───────────────────────────────────────────────────────────────
+.ct-stores {
+  display: flex;
+  flex-direction: column;
+}
+
+.ct-store {
+  padding: 24px 0;
+  border-bottom: 1px solid #e8edf3;
+
+  &:first-child {
+    padding-top: 0;
+  }
+
+  &:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+  // ── Header: pin + address name + hours ────────────────────────────────────
+  &__head {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+
+  &__pin {
+    flex-shrink: 0;
+    margin-top: 2px;
+    display: flex;
+  }
+
+  &__head-text {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+  }
+
+  &__name {
+    font-size: 15px;
+    font-weight: 700;
+    color: $text-color;
+    line-height: 1.35;
+  }
+
+  &__hours {
+    font-size: 13px;
+    color: #8a9ab5;
+    line-height: 1.4;
+  }
+
+  // ── Full address ──────────────────────────────────────────────────────────
+  &__desc {
+    font-size: 13px;
+    line-height: 1.55;
+    color: $text-color;
+    margin: 0 0 12px;
+    padding-left: 26px;
+  }
+
+  // ── Metro badge ───────────────────────────────────────────────────────────
+  &__metro {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 12px;
+    padding-left: 26px;
+  }
+
+  &__metro-icon {
+    flex-shrink: 0;
+    display: block;
+  }
+
+  &__metro-text {
+    font-size: 13px;
+    color: $text-color;
+  }
+
+  // ── Phone row ─────────────────────────────────────────────────────────────
+  &__phones {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding-left: 26px;
+  }
+
+  &__phone-icon {
+    flex-shrink: 0;
+    margin-top: 1px;
+    display: flex;
+  }
+
+  &__phone-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  &__phone {
+    font-size: 14px;
+    font-weight: 600;
+    color: $text-color;
+    text-decoration: none;
+    line-height: 1.5;
+
+    &:hover,
+    &:focus {
+      color: $ct-teal;
+      text-decoration: none;
+    }
+  }
+}
+
+// ── Map ───────────────────────────────────────────────────────────────────────
+.ct-map {
+  border-radius: 20px;
+  overflow: hidden;
+  min-height: 420px;
+  height: 100%;
+}
+
+#ct-map-leaflet {
+  width: 100%;
+  height: 100%;
+  min-height: 420px;
+}
+
+// ── Bottom two-col grid (Реквизиты | callback form) ──────────────────────────
+.ct-bottom {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  align-items: stretch;
+}
+
+.ct-req-block {
+  display: flex;
+  flex-direction: column;
+}
+
+.ct-callback-block {
+  background: #eaf2f8;
+  border-radius: 20px;
+  padding: 28px 32px;
+  display: flex;
+  flex-direction: column;
+}
+
+// ── Requisites table ──────────────────────────────────────────────────────────
+.ct-req-table {
+  flex: 1;
+  background: $ct-dark-bg;
+  border-radius: 20px;
+  overflow: hidden;
+
+  &__row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 18px 28px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+
+    &--last {
+      border-bottom: none;
+    }
+  }
+
+  &__label {
+    font-size: 14px;
+    font-weight: 500;
+    color: $ct-label-mute;
+    min-width: 80px;
+    flex-shrink: 0;
+  }
+
+  &__value {
+    font-size: 14px;
+    font-weight: 500;
+    color: #fff;
+  }
+
+  &__link {
+    color: #fff;
+    text-decoration: underline;
+
+    &:hover,
+    &:focus {
+      color: rgba(255, 255, 255, 0.8);
+      text-decoration: none;
+    }
+  }
+}
+
+// ── Callback form ─────────────────────────────────────────────────────────────
+.ct-form {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  &__row {
+    display: flex;
+    gap: 10px;
+
+    &--3col {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    &--captcha {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: stretch;
+    }
+  }
+
+  &__input {
+    width: 100%;
+    background: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 14px 16px;
+    font-size: 14px;
+    font-family: inherit;
+    color: $text-color;
+    outline: none;
+    resize: none;
+    transition: box-shadow 0.2s;
+    box-sizing: border-box;
+
+    &::placeholder {
+      color: #a8b8cc;
+    }
+
+    &:focus {
+      box-shadow: 0 0 0 2px rgba($ct-teal, 0.35);
+    }
+  }
+
+  &__textarea {
+    min-height: 80px;
+    resize: vertical;
+  }
+
+  // ── Captcha placeholder ───────────────────────────────────────────────────
+  &__captcha-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #f472b6 0%, #818cf8 40%, #34d399 80%, #fb923c 100%);
+    border-radius: 10px;
+    min-width: 130px;
+    padding: 0 20px;
+    user-select: none;
+  }
+
+  &__captcha-text {
+    font-size: 20px;
+    font-weight: 800;
+    color: #fff;
+    letter-spacing: 4px;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.35);
+    font-family: 'Courier New', monospace;
+  }
+
+  // ── Checkbox row ──────────────────────────────────────────────────────────
+  &__check {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    cursor: pointer;
+  }
+
+  &__checkbox {
+    flex-shrink: 0;
+    margin-top: 2px;
+    width: 18px;
+    height: 18px;
+    accent-color: $ct-teal;
+    cursor: pointer;
+  }
+
+  &__check-text {
+    font-size: 13px;
+    line-height: 1.55;
+    color: $text-color;
+  }
+
+  &__check-link {
+    color: $ct-teal;
+    text-decoration: underline;
+
+    &:hover,
+    &:focus {
+      color: darken($ct-teal, 10%);
+      text-decoration: none;
+    }
+  }
+
+  // ── Submit button ─────────────────────────────────────────────────────────
+  &__submit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    padding: 16px 24px;
+    background: linear-gradient(90deg, #3dacd2 0%, #52c5ed 100%);
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: inherit;
+    color: #fff;
+    cursor: pointer;
+    transition: opacity 0.2s;
+    letter-spacing: 0.01em;
+
+    &:hover,
+    &:focus {
+      opacity: 0.9;
+    }
+
+    svg {
+      flex-shrink: 0;
+    }
+  }
+}
+
+// ── Responsive: tablet ────────────────────────────────────────────────────────
+@media (max-width: 991px) {
+  .ct-main {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .ct-map,
+  #ct-map-leaflet {
+    min-height: 320px;
+  }
+
+  .ct-bottom {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .ct-form__row--3col {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+// ── Responsive: mobile ────────────────────────────────────────────────────────
+@media (max-width: 575px) {
+  .ct-page {
+    padding: 24px 0 40px;
+  }
+
+  .ct-section-title {
+    font-size: 22px;
+  }
+
+  .ct-map,
+  #ct-map-leaflet {
+    min-height: 260px;
+  }
+
+  .ct-form__row--3col {
+    grid-template-columns: 1fr;
+  }
+
+  .ct-form__row--captcha {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .ct-form__captcha-img {
+    min-height: 52px;
+    min-width: unset;
+  }
+
+  .ct-req-table__row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+    padding: 14px 20px;
+  }
+
+  .ct-req-table__label {
+    min-width: unset;
+  }
+}

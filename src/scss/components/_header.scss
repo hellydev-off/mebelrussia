@@ -1,0 +1,538 @@
+// ── Верхняя полоса ───────────────────────────────────────────────────────────
+#top {
+  font-size: 16px;
+  font-weight: 400;
+
+  a {
+    color: $text-color;
+    text-decoration: none;
+
+    &:hover {
+      color: $brand-primary;
+    }
+  }
+
+  .btn-group {
+    display: inline-block;
+  }
+}
+
+.topbar-inner {
+  display: flex;
+  align-items: stretch;
+  height: 36px;
+}
+
+.topbar-stores {
+  display: flex;
+  align-items: center;
+  padding-right: 20px;
+  white-space: nowrap;
+
+  &__link {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: $text-color;
+    text-decoration: none;
+
+    &:hover {
+      color: $brand-primary;
+    }
+  }
+
+  &__icon {
+    font-size: 16px;
+    line-height: 1;
+  }
+}
+
+.topbar-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  padding: 0 20px;
+  gap: 26px;
+
+  a {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    white-space: nowrap;
+    color: $text-color;
+    text-decoration: none;
+
+    &:hover {
+      color: $brand-primary;
+    }
+  }
+
+  &__sale {
+    color: #ec4d76 !important;
+    font-weight: 500;
+
+    &:hover {
+      color: darken(#ec4d76, 10%) !important;
+    }
+  }
+
+  &__sale-icon {
+    font-size: 12px;
+  }
+}
+
+.topbar-phone {
+  padding-left: 20px;
+  white-space: nowrap;
+
+  .topbar-dropdown__trigger {
+    gap: 5px;
+
+    strong {
+      font-size: 18px;
+      font-weight: 700;
+    }
+  }
+
+  &__icon {
+    flex-shrink: 0;
+    display: none;
+  }
+}
+
+.topbar-arrow {
+  width: 9px;
+  height: 6px;
+  flex-shrink: 0;
+  vertical-align: middle;
+  transition: transform 0.2s ease;
+}
+
+// ── Выпадающие меню ──────────────────────────────────────────────────────────
+.topbar-dropdown {
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  &__trigger {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    white-space: nowrap;
+    color: $text-color;
+    text-decoration: none;
+    user-select: none;
+
+    &:hover {
+      color: $brand-primary;
+    }
+  }
+
+  &.open {
+    > .topbar-dropdown__trigger .topbar-arrow {
+      transform: rotate(180deg);
+    }
+
+    > .topbar-dropdown__menu {
+      display: block;
+    }
+  }
+
+  &__menu {
+    display: none;
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 0;
+    background: #fff;
+    border: 1px solid #e8e8e8;
+    border-radius: 10px;
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.12);
+    min-width: 190px;
+    z-index: 1100;
+    padding: 6px 0;
+
+    a {
+      display: block;
+      padding: 9px 18px;
+      white-space: nowrap;
+      font-size: 15px;
+      color: $text-color;
+      text-decoration: none;
+
+      &:hover {
+        background: #f5f8fa;
+        color: $brand-primary;
+      }
+    }
+
+    &--phone {
+      left: auto;
+      right: 0;
+      min-width: 260px;
+      padding: 8px 0;
+    }
+  }
+
+  &__contact-link {
+    display: flex !important;
+    align-items: center;
+    gap: 10px;
+    padding: 9px 16px !important;
+    font-size: 15px !important;
+
+    &:hover {
+      background: #f5f8fa;
+      color: $brand-primary;
+    }
+  }
+
+  &__contact-icon {
+    flex-shrink: 0;
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    svg {
+      display: block;
+    }
+  }
+
+  &__contact-callback strong {
+    font-weight: 700;
+    font-size: 15px;
+  }
+
+  &__divider {
+    height: 1px;
+    background: #e8e8e8;
+    margin: 6px 0;
+  }
+
+  &__phone-info {
+    padding: 10px 16px;
+
+    strong {
+      display: block;
+      font-size: 18px;
+      font-weight: 700;
+      color: $text-color;
+    }
+
+    span {
+      display: block;
+      font-size: 13px;
+      color: #8496a1;
+      margin-top: 3px;
+      line-height: 1.4;
+    }
+  }
+
+  &__contacts-link {
+    display: block !important;
+    padding: 9px 18px !important;
+    font-size: 15px !important;
+    color: $text-color !important;
+
+    &:hover {
+      background: #f5f8fa;
+      color: $brand-primary !important;
+    }
+  }
+}
+
+// ── Основная шапка ───────────────────────────────────────────────────────────
+#header {
+  background: #fff;
+  border-bottom: 1px solid $navbar-default-border;
+  padding: 14px 0;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.header-logo {
+  flex-shrink: 0;
+
+  img {
+    display: block;
+    max-height: 56px;
+    width: auto;
+  }
+}
+
+.header-catalog-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  background: #3dacd2;
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  padding: 0 24px;
+  height: 52px;
+  font-size: 18px;
+  font-weight: 700;
+  font-family: inherit;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.15s;
+
+  &:hover {
+    background: darken(#3dacd2, 8%);
+  }
+}
+
+.header-search {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  background: #eaf2f8;
+  border-radius: 12px;
+  height: 52px;
+  padding: 0 16px;
+  gap: 8px;
+
+  input[type='text'] {
+    flex: 1;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    font-family: inherit;
+    color: $text-color;
+
+    &::placeholder {
+      color: #aab5be;
+    }
+  }
+
+  &__btn {
+    flex-shrink: 0;
+    background: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    color: #8496a1;
+    display: flex;
+    align-items: center;
+    line-height: 1;
+
+    &:hover {
+      color: $brand-primary;
+    }
+  }
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-shrink: 0;
+}
+
+.header-action {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  text-decoration: none;
+  color: #8496a1;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1;
+  transition: color 0.15s;
+
+  svg {
+    display: block;
+  }
+
+  &:hover {
+    color: $brand-primary;
+    text-decoration: none;
+  }
+}
+
+// ── Sticky при скролле (добавляется через JS) ─────────────────────────────────
+body.scrolled #header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+}
+
+// ── Topbar: телефон → иконка (< 1200px) ──────────────────────────────────────
+// Номер схлопывается в кликабельную иконку телефона; по клику открывается
+// тот же dropdown со списком контактов (логика в main.js, класс .open).
+@media (max-width: 1199px) {
+  .topbar-phone {
+    &__text,
+    &__arrow {
+      display: none;
+    }
+
+    &__icon {
+      display: block;
+      width: 18px;
+      height: 18px;
+    }
+
+    .topbar-dropdown__trigger {
+      gap: 0;
+      width: 34px;
+      height: 34px;
+      justify-content: center;
+      border-radius: 50%;
+      background: #eaf2f8;
+      color: $brand-primary;
+    }
+  }
+}
+
+// ── Topbar: Tablet (768px – 991px) ───────────────────────────────────────────
+@media (max-width: 991px) {
+  #top {
+    font-size: 14px;
+  }
+
+  .topbar-nav {
+    gap: 14px;
+  }
+
+  .topbar-stores {
+    padding-right: 12px;
+  }
+
+  .topbar-phone {
+    padding-left: 12px;
+
+    .topbar-dropdown__trigger strong {
+      font-size: 15px;
+    }
+  }
+}
+
+// ── Topbar: Mobile (< 768px) ──────────────────────────────────────────────────
+@media (max-width: 767px) {
+  .topbar-nav {
+    display: none;
+  }
+
+  .topbar-inner {
+    justify-content: space-between;
+  }
+
+  .topbar-stores {
+    padding-right: 0;
+  }
+
+  .topbar-phone {
+    padding-left: 0;
+  }
+}
+
+// ── Topbar: Small mobile (< 480px) ────────────────────────────────────────────
+@media (max-width: 479px) {
+  .topbar-stores__link span,
+  .topbar-stores__link .topbar-arrow {
+    display: none;
+  }
+
+  .topbar-stores__link {
+    gap: 0;
+  }
+
+  #top {
+    font-size: 13px;
+  }
+}
+
+// ── Header: Tablet (768px – 991px) ────────────────────────────────────────────
+@media (max-width: 991px) {
+  .header-inner {
+    gap: 12px;
+  }
+
+  .header-catalog-btn {
+    padding: 0 16px;
+    font-size: 16px;
+  }
+
+  .header-action span {
+    display: none;
+  }
+
+  .header-actions {
+    gap: 16px;
+  }
+}
+
+// ── Mobile (< 768px) ──────────────────────────────────────────────────────────
+@media (max-width: 767px) {
+  #header {
+    padding: 10px 0;
+  }
+
+  .header-inner {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  // Row 1: catalog-btn | logo (centred) | actions
+  .header-catalog-btn {
+    order: 1;
+    padding: 0 12px;
+    height: 44px;
+    border-radius: 10px;
+    font-size: 0; // hide text, keep icon
+    gap: 0;
+  }
+
+  .header-catalog-btn__text {
+    display: none;
+  }
+
+  .header-logo {
+    order: 2;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+
+    img {
+      max-height: 40px;
+    }
+  }
+
+  .header-actions {
+    order: 3;
+    gap: 12px;
+    flex-shrink: 0;
+  }
+
+  // Row 2: search spans full width
+  .header-search {
+    order: 4;
+    width: 100%;
+    height: 44px;
+    border-radius: 10px;
+  }
+}
+
+// ── Small mobile (< 480px) ────────────────────────────────────────────────────
+@media (max-width: 479px) {
+  .header-actions {
+    gap: 8px;
+  }
+
+  .header-action img {
+    width: 22px;
+    height: 22px;
+  }
+}

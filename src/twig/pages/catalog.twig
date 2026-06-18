@@ -1,0 +1,173 @@
+{% extends "layouts/base.twig" %}
+
+{% set bodyClass = 'page-catalog' %}
+
+{% block title %}Каталог — {{ siteName }}{% endblock %}
+
+{% block content %}
+<div class="container" style="margin-top:20px; margin-bottom:40px;">
+
+  {# Хлебные крошки (OC использует тот же компонент) #}
+  <ol class="breadcrumb">
+    <li><a href="/index.html">Главная</a></li>
+    <li class="active">Каталог</li>
+  </ol>
+
+  {# ═══════════════════════════════════════════════════════════════════
+     СЕТКА OPENCART: #column-left | #content | #column-right
+     Ширина #content вычисляется по наличию сайдбаров — точно так же,
+     как в штатном category.twig OpenCart 3. При интеграции эти три
+     set-строки заменяются переменными OC (column_left / column_right
+     приходят из контроллера), здесь заданы дефолты для локального билда.
+     ═══════════════════════════════════════════════════════════════════ #}
+  {% set column_left  = column_left  ?? true %}
+  {% set column_right = column_right ?? true %}
+  {% if column_left and column_right %}
+    {% set content_class = 'col-sm-6' %}
+  {% elseif column_left or column_right %}
+    {% set content_class = 'col-sm-9' %}
+  {% else %}
+    {% set content_class = 'col-sm-12' %}
+  {% endif %}
+
+  <div class="row">
+
+    {# ── Левая колонка: категории, фильтр цены ──────────────────────── #}
+    {% if column_left %}
+    <div id="column-left" class="col-sm-3 hidden-xs">
+
+      <h5>Категории</h5>
+      <div class="list-group">
+        <a href="#" class="list-group-item active">Все товары</a>
+        <a href="#" class="list-group-item">Смартфоны</a>
+        <a href="#" class="list-group-item">Ноутбуки</a>
+        <a href="#" class="list-group-item">Планшеты</a>
+        <a href="#" class="list-group-item">Аксессуары</a>
+      </div>
+
+      <h5 style="margin-top:20px;">Цена, ₽</h5>
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <div class="row">
+            <div class="col-xs-6">
+              <input type="text" class="form-control input-sm" placeholder="от" value="0">
+            </div>
+            <div class="col-xs-6">
+              <input type="text" class="form-control input-sm" placeholder="до" value="100000">
+            </div>
+          </div>
+          <button class="btn btn-default btn-sm btn-block" style="margin-top:8px;">Применить</button>
+        </div>
+      </div>
+
+    </div>{# /#column-left #}
+    {% endif %}
+
+    {# ── Центральный контент: список товаров ────────────────────────── #}
+    <div id="content" class="{{ content_class }}">
+
+      <h1 style="font-size:22px; margin-top:0;">Каталог товаров</h1>
+
+      {# Тулбар сортировки #}
+      <div class="product-filter">
+        <div class="display-options">
+          <button class="btn btn-default active" title="Сетка">
+            <span class="glyphicon glyphicon-th"></span>
+          </button>
+          <button class="btn btn-default" title="Список">
+            <span class="glyphicon glyphicon-th-list"></span>
+          </button>
+        </div>
+        <div class="sort-group">
+          <label class="control-label">Сортировка:</label>
+          <select class="form-control input-sm">
+            <option>По умолчанию</option>
+            <option>По цене ↑</option>
+            <option>По цене ↓</option>
+            <option>По названию</option>
+            <option>По рейтингу</option>
+          </select>
+          <select class="form-control input-sm">
+            <option>20 / стр.</option>
+            <option>40 / стр.</option>
+            <option>80 / стр.</option>
+          </select>
+        </div>
+      </div>
+
+      {# Сетка товаров (в OC — {% for product in products %}) #}
+      <div class="row product-grid">
+        {% for product in products %}
+        <div class="product-layout col-xs-6 col-md-4">
+          <div class="product-thumb">
+            <div class="image">
+              <a href="/product.html">
+                <img src="https://placehold.co/300x220/e8e8e8/aaa?text={{ product.name|url_encode }}"
+                     alt="{{ product.name }}" class="img-responsive">
+              </a>
+            </div>
+            <div class="caption">
+              <h4><a href="/product.html">{{ product.name }}</a></h4>
+              <p class="price">
+                {% if product.oldPrice %}
+                  <span class="price-old">{{ product.oldPrice }} ₽</span>
+                  <span class="price-new">{{ product.price }} ₽</span>
+                {% else %}
+                  {{ product.price }} ₽
+                {% endif %}
+              </p>
+              <div class="button-group">
+                <button class="btn btn-primary btn-sm" title="В корзину">
+                  <span class="glyphicon glyphicon-shopping-cart"></span>
+                </button>
+                <button class="btn btn-default btn-sm" title="В желания">
+                  <span class="glyphicon glyphicon-heart"></span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+
+      {# Пагинация #}
+      <div class="pagination-wrapper">
+        <ul class="pagination">
+          <li class="disabled"><a>&laquo;</a></li>
+          <li class="active"><a href="#">1</a></li>
+          <li><a href="#">2</a></li>
+          <li><a href="#">3</a></li>
+          <li><a href="#">&raquo;</a></li>
+        </ul>
+        <p class="text-muted" style="font-size:13px;">Показано 1–4 из 18 товаров</p>
+      </div>
+
+    </div>{# /#content #}
+
+    {# ── Правая колонка: бренды, баннер ─────────────────────────────── #}
+    {% if column_right %}
+    <div id="column-right" class="col-sm-3 hidden-xs">
+
+      <h5>Бренды</h5>
+      <div class="list-group">
+        <a href="#" class="list-group-item">Apple</a>
+        <a href="#" class="list-group-item">Samsung</a>
+        <a href="#" class="list-group-item">Xiaomi</a>
+        <a href="#" class="list-group-item">Huawei</a>
+        <a href="#" class="list-group-item">Lenovo</a>
+      </div>
+
+      <div class="panel panel-default" style="margin-top:20px;">
+        <div class="panel-heading"><strong>Реклама</strong></div>
+        <div class="panel-body text-center"
+             style="background:#f0f0f0; min-height:140px; line-height:140px; color:#aaa;">
+          160×300
+        </div>
+      </div>
+
+    </div>{# /#column-right #}
+    {% endif %}
+
+  </div>{# /.row #}
+</div>{# /.container #}
+{% endblock %}

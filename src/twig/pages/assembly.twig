@@ -1,0 +1,286 @@
+{% extends "layouts/base.twig" %}
+
+{% block title %}Сборка мебели — {{ siteName }}{% endblock %}
+
+{% block content %}
+<section class="as-page">
+  <div class="container">
+
+    {# Breadcrumbs #}
+    <ol class="breadcrumb co-breadcrumb">
+      <li><a href="/">Главная</a></li>
+      <li class="active">Сборка</li>
+    </ol>
+
+    <h1 class="co-page__h1">Сборка мебели</h1>
+
+    <p class="about__text">
+      Сборка мебели осуществляется опытными и ответственными мастерами, качественно и в кратчайшие сроки.
+      У нас работают только опытные специалисты. Сборка мебели осуществляется в день доставки (необходимо
+      предупредить Вашего сборщика заранее). Если сборщик недоступен, воспользуйтесь схемой, имеющейся
+      в комплекте. Мы не несём ответственности за неправильную сборку, например, если вы решили изменить
+      сборочную конфигурацию. Сохраняйте места своих стенок или изменить (таблетке).
+    </p>
+
+    {# ── 5 feature cards ── #}
+    <div class="as-features">
+
+      <div class="as-feature">
+        <img src="/images/assembly/icons/icon_step1.svg" alt="" class="as-feature__icon">
+        <p class="as-feature__title">Гарантия на&nbsp;сборку 3&nbsp;года</p>
+        <p class="as-feature__text">У нас есть гарантия 3 года на все виды сборки в Санкт-Петербурге: уточните подробности по телефону</p>
+      </div>
+
+      <div class="as-feature">
+        <img src="/images/assembly/icons/icon_step2.svg" alt="" class="as-feature__icon">
+        <p class="as-feature__title">Низкие цены</p>
+        <p class="as-feature__text">Наши цены самые лучшие в регионе, потому что мы предлагаем очень недорогие расценки на любые услуги</p>
+      </div>
+
+      <div class="as-feature">
+        <img src="/images/assembly/icons/icon_step3.svg" alt="" class="as-feature__icon">
+        <p class="as-feature__title">Профессиональный коллектив</p>
+        <p class="as-feature__text">Все наши специалисты хорошо обучены и квалифицированы, поэтому могут выполнять разные виды работ</p>
+      </div>
+
+      <div class="as-feature">
+        <img src="/images/assembly/icons/icon_step4.svg" alt="" class="as-feature__icon">
+        <p class="as-feature__title">Круглосуточный приём заказов</p>
+        <p class="as-feature__text">Вы всегда можете нам позвонить и уточнить стоимость нашего телефона, не ограничиваясь определённым временем</p>
+      </div>
+
+      <div class="as-feature">
+        <img src="/images/assembly/icons/icon_step5.svg" alt="" class="as-feature__icon">
+        <p class="as-feature__title">Всегда трезвые специалисты</p>
+        <p class="as-feature__text">Мы несём ответственность за это, и предоставляем гарантию на все выполненные работы</p>
+      </div>
+
+    </div>{# /as-features #}
+
+    {# Notice #}
+    <div class="dl-notice">
+      <span class="dl-notice__icon" aria-hidden="true">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+          <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+          <path d="M12 8v4M12 16h.01" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+        </svg>
+      </span>
+      <span class="dl-notice__text"><strong>Сборка мебели</strong> может выполняться самостоятельно (в каждом комплекте находится инструкция по сборке) или воспользоваться услугами наших специалистов.</span>
+    </div>
+
+    {# ── Сборка мебели и цена ── #}
+    <h2 class="as-section-title">Сборка мебели и цена:</h2>
+
+    {# Row 1: 3 columns #}
+    <div class="row as-furniture-row">
+      <div class="col-sm-4">
+        <div class="as-card">
+          <div class="as-card__img-wrap">
+            <img src="/images/assembly/badroom.png" alt="Мебель для спальни" class="as-card__img">
+            <div class="as-card__label">Мебель для спальни</div>
+          </div>
+        </div>
+        <p class="as-card__price"><strong>от 3000 руб.</strong></p>
+      </div>
+      <div class="col-sm-4">
+        <div class="as-card">
+          <div class="as-card__img-wrap">
+            <img src="/images/assembly/living.png" alt="Мебель в гостиную" class="as-card__img">
+            <div class="as-card__label">Мебель в гостиную</div>
+          </div>
+        </div>
+        <p class="as-card__price"><strong>10%</strong> от стоимости заказа, но <strong>не менее 1700 руб.</strong></p>
+      </div>
+      <div class="col-sm-4">
+        <div class="as-card">
+          <div class="as-card__img-wrap">
+            <img src="/images/assembly/kitchen.png" alt="Модульные кухни" class="as-card__img">
+            <div class="as-card__label">Модульные кухни</div>
+          </div>
+        </div>
+        <p class="as-card__price"><strong>500 руб./1 шкаф;</strong><br>или <strong>10%</strong> от стоимости заказа</p>
+      </div>
+    </div>{# /row 1 #}
+
+    {# Row 2: 2 columns #}
+    <div class="row as-furniture-row">
+      <div class="col-sm-6">
+        <div class="as-card">
+          <div class="as-card__img-wrap">
+            <img src="/images/assembly/babybed.png" alt="Детские кровати-чердак" class="as-card__img">
+            <div class="as-card__label">Детские кровати-чердак</div>
+          </div>
+        </div>
+        <p class="as-card__price"><strong>10%</strong> от стоимости заказа, но <strong>не менее 1500 руб.</strong></p>
+      </div>
+      <div class="col-sm-6">
+        <div class="as-card">
+          <div class="as-card__img-wrap">
+            <img src="/images/assembly/babybed2.png" alt="Детские кровати серии Приют-Мини" class="as-card__img">
+            <div class="as-card__label">Детские кровати серии Приют-Мини</div>
+          </div>
+        </div>
+        <p class="as-card__price"><strong>2000 руб.</strong></p>
+      </div>
+    </div>{# /row 2 #}
+
+    {# Row 3: 4 columns + shared price below #}
+    <div class="row as-furniture-row as-furniture-row--no-price">
+      <div class="col-xs-6 col-sm-3">
+        <div class="as-card">
+          <div class="as-card__img-wrap">
+            <img src="/images/assembly/tv.png" alt="Тумбы под ТВ" class="as-card__img">
+            <div class="as-card__label">Тумбы под ТВ</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-6 col-sm-3">
+        <div class="as-card">
+          <div class="as-card__img-wrap">
+            <img src="/images/assembly/bedside.png" alt="Прикроватные тумбы" class="as-card__img">
+            <div class="as-card__label">Прикроватные тумбы</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-6 col-sm-3">
+        <div class="as-card">
+          <div class="as-card__img-wrap">
+            <img src="/images/assembly/rack.png" alt="Стеллажи" class="as-card__img">
+            <div class="as-card__label">Стеллажи</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-6 col-sm-3">
+        <div class="as-card">
+          <div class="as-card__img-wrap">
+            <img src="/images/assembly/table.png" alt="Компьютерные столы" class="as-card__img">
+            <div class="as-card__label">Компьютерные столы</div>
+          </div>
+        </div>
+      </div>
+    </div>{# /row 3 #}
+
+    <p class="as-shared-price">
+      кровати, тумбы под ТВ, комоды, прикроватные тумбы, пеналы, стеллажи,
+      столы обеденные, компьютерные, журнальные, туалетные:
+      <strong>10%</strong> от стоимости заказа, но <strong>не менее 1500 руб.</strong>
+    </p>
+
+    {# Row 4: 2 columns #}
+    <div class="row as-furniture-row">
+      <div class="col-sm-6">
+        <div class="as-card">
+          <div class="as-card__img-wrap">
+            <img src="/images/assembly/hallway.png" alt="Мебель в прихожую" class="as-card__img">
+            <div class="as-card__label">Мебель в прихожую</div>
+          </div>
+        </div>
+        <p class="as-card__price">Прихожие, гардеробные, шкафы распашные:<br><strong>10%</strong> от стоимости заказа, но <strong>не менее 1700 руб.</strong></p>
+      </div>
+      <div class="col-sm-6">
+        <div class="as-card">
+          <div class="as-card__img-wrap">
+            <img src="/images/assembly/coupe.png" alt="Шкафы-купе" class="as-card__img">
+            <div class="as-card__label">Шкафы-купе</div>
+          </div>
+        </div>
+        <p class="as-card__price">Шкафы-купе: <strong>10%</strong> от стоимости заказа, но <strong>не менее 2000 руб.</strong></p>
+      </div>
+    </div>{# /row 4 #}
+
+    {# Notice: другая мебель #}
+    <div class="dl-notice">
+      <span class="dl-notice__icon" aria-hidden="true">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+          <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+          <path d="M12 8v4M12 16h.01" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+        </svg>
+      </span>
+      <span class="dl-notice__text"><strong>*Сборка другой мебели:</strong> рассчитывается индивидуально</span>
+    </div>
+
+    {# ── Информация для покупателя ── #}
+    <div class="as-buyer">
+      <img src="/images/assembly/man.png" alt="Информация для покупателя" class="as-buyer__img">
+      <div class="as-buyer__intro">
+        <h2 class="as-section-title as-section-title--no-top">Информация для покупателя</h2>
+        <p class="about__text">
+          Будьте аккуратны при вскрытии товара, сохраняйте упаковку до момента полной уверенности в том,
+          что Ваш заказ пришёл в нужном цвете и комплектации. Вынос упаковки осуществляется самостоятельно.
+        </p>
+        <p class="about__text">
+          При покупке мебели без сборки приёмка происходит в момент доставки. Принятая мебель, как сложный
+          товар, возврату и обмену не подлежит (Ст. 25 «Закона о защите прав потребителей»).
+          Последующая сборка мебели — платная услуга.
+        </p>
+      </div>
+      <div class="as-buyer__box">
+        <p>
+          Покупатель может отказаться от покупки до момента передачи товара. При этом, покупатель должен
+          возместить продавцу расходы, понесённые в связи с совершением действий по исполнению заказа
+          (497 статья ГК РФ). К таким действиям относятся доставка и подъём мебели.
+        </p>
+        <p>
+          При получении заказа тщательно проверяйте цветовую гамму, целостность зеркал и стекол. Будьте
+          внимательны и сразу же сообщите водителю, если товар не соответствует заказанному Вами или имеет
+          брак. В случае обнаружения нецелостности зеркал и стекол после отгрузки товара, замена бракованных
+          или недостающих деталей осуществляется путём самовывоза со склада поставщика или доставляется на
+          платной основе, исходя из стоимости 500 руб. за адрес в г. СПб или 40 руб./км по Лен. области.
+        </p>
+        <p>
+          При покупке мебели с услугой «Сборка мебели» — весь сервис по устранению недостатков (в том числе
+          замена элементов) мебели выполняет монтажник-доставщик.
+        </p>
+        <p>
+          Сборка мебели может быть произведена только при наличии хорошего освещения, в отапливаемом
+          помещении с достаточным местом для самой сборки. При невыполнении этих условий сборщик вправе
+          отказать Вам в услуге по сборке или её стоимость увеличится минимум на 50%.
+        </p>
+      </div>
+    </div>{# /as-buyer #}
+
+    {# ── Рекламация по браку ── #}
+    <h2 class="as-section-title">Рекламация по браку</h2>
+
+    <div class="dl-notice">
+      <span class="dl-notice__icon" aria-hidden="true">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+          <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+          <path d="M12 8v4M12 16h.01" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+        </svg>
+      </span>
+      <span class="dl-notice__text">
+        Рекламация по браку принимается только письмом на эл. почту
+        <a href="mailto:zakaz@mebelrussian.ru">zakaz@mebelrussian.ru</a><br>
+        В письме требуется указать: <strong>№ договора купли-продажи, дата</strong>
+      </span>
+    </div>
+
+    <p class="as-defect-subtitle">Также в письме требуется указать данные о бракованной детали:</p>
+
+    <div class="as-defect-cols">
+      <ul class="dl-dot-list">
+        <li>Наименование изделия</li>
+        <li>Номер пачки</li>
+        <li>Цвет бракованной детали</li>
+      </ul>
+      <ul class="dl-dot-list">
+        <li>Номер секции</li>
+        <li>Номер элемента и его название</li>
+        <li>Размер детали</li>
+      </ul>
+      <ul class="dl-dot-list">
+        <li>Количество</li>
+        <li>№ упаковщика, № партии, дата</li>
+      </ul>
+    </div>
+
+    <p class="about__text">
+      Не забудьте приложить фотографии, наиболее наглядно характеризующих брак товара и фотографию этикетки.<br>
+      Выше перечисленные требования обязательны для всех покупателей без исключения.
+    </p>
+
+  </div>{# /container #}
+</section>
+
+{% endblock %}

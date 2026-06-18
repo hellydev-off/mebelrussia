@@ -1,0 +1,49 @@
+// ── AJAX-уведомления OpenCart ─────────────────────────────────────────────────
+// OC дописывает .alert.alert-success / .alert-danger в #alert при добавлении
+// товара в корзину / список желаний / сравнение. Показываем как fixed-тост
+// в правом верхнем углу, поверх sticky-шапки.
+#alert {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  z-index: 2000; // выше sticky #header (z-index: 1000)
+  max-width: 360px;
+  width: calc(100% - 32px);
+  pointer-events: none; // клики проходят сквозь пустой контейнер
+
+  .alert {
+    pointer-events: auto;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.18);
+    padding: 14px 40px 14px 16px;
+    font-size: 14px;
+    animation: alert-in 0.25s ease;
+
+    // OC кладёт иконку <i class="fa fa-..."> перед текстом
+    .fa,
+    i {
+      margin-right: 8px;
+    }
+
+    .close {
+      position: absolute;
+      top: 10px;
+      right: 12px;
+    }
+  }
+}
+
+@keyframes alert-in {
+  from { opacity: 0; transform: translateY(-12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 479px) {
+  #alert {
+    top: 8px;
+    right: 8px;
+    width: calc(100% - 16px);
+  }
+}

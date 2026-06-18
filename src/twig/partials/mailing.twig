@@ -1,0 +1,58 @@
+<section class="mailing">
+
+  {# ── % иконки — абсолютно, правый верхний угол ── #}
+  <img src="/images/index/mailing/percent-pink.png"   alt="" class="mailing__abs-icon mailing__abs-icon--pink" />
+  <img src="/images/index/mailing/percent-select.png" alt="" class="mailing__abs-icon mailing__abs-icon--select" />
+
+  {# ── Левый декор ── #}
+  <div class="mailing__left">
+    <img src="/images/index/mailing/percent-circle.png" alt="" class="mailing__decor-img mailing__decor-img--percent-circle" />
+    <img src="/images/index/mailing/lightning.png"      alt="" class="mailing__decor-img mailing__decor-img--lightning-1" />
+    <img src="/images/index/mailing/lightning.png"      alt="" class="mailing__decor-img mailing__decor-img--lightning-2" />
+    <img src="/images/index/mailing/lightning.png"      alt="" class="mailing__decor-img mailing__decor-img--lightning-3" />
+    <img src="/images/index/mailing/megaphone.png"      alt="" class="mailing__decor-img mailing__decor-img--megaphone" />
+  </div>
+
+  {# ── Центр: заголовок + форма + кнопка ── #}
+  <div class="mailing__body">
+    <h2 class="mailing__title">
+      Узнай <span class="mailing__pink">об акции</span> <span class="mailing__teal">первым!</span>
+    </h2>
+    <p class="mailing__sub">Подпишись на нашу рассылку</p>
+
+    <div class="mailing__form-area">
+      <div class="mailing__white-box">
+        <div class="mailing__toggle">
+          <label class="mailing__toggle-label">
+            <input type="radio" name="mailing_type" value="email" checked class="mailing__radio" />
+            <span class="mailing__toggle-dot"></span>
+            Email
+          </label>
+          <label class="mailing__toggle-label">
+            <input type="radio" name="mailing_type" value="sms" class="mailing__radio" />
+            <span class="mailing__toggle-dot"></span>
+            SMS
+          </label>
+        </div>
+        <input type="email" class="mailing__input" placeholder="Введите ваш email" />
+      </div>
+
+      <button class="mailing__btn" type="submit">Подписаться</button>
+
+      <label class="mailing__agree-label">
+        <input type="checkbox" class="mailing__checkbox" />
+        <span class="mailing__agree-text">
+          Даю согласие на получение рекламных рассылок и соглашаюсь
+          с <a href="#">условиями обработки и использования персональных данных</a>
+        </span>
+      </label>
+
+      <label class="mailing__unsub">
+        <input type="checkbox" class="mailing__checkbox" />
+        <a href="#">Отписаться</a>
+      </label>
+    </div>
+  </div>
+
+
+</section>

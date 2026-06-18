@@ -1,0 +1,15 @@
+{% set products = [
+  { badges: ['sale', 'hit'], price: '19 500', old_price: '27 990', wish: false, specs: [['Глубина','1000 мм'],['Ширина','460 мм'],['Высота','920 мм']] },
+  { badges: ['hit', 'new'],  price: '27 990', old_price: '',        wish: false, specs: [['Глубина','1000 мм'],['Ширина','460 мм']] },
+  { badges: ['sale'],        price: '19 500', old_price: '27 990', wish: true,  specs: [['Ширина','460 мм'],['Высота','920 мм']] },
+  { badges: ['new'],         price: '27 990', old_price: '',        wish: false, specs: [['Глубина','1000 мм'],['Ширина','460 мм'],['Высота','920 мм']] },
+  { badges: ['sale', 'new'], price: '19 500', old_price: '27 990', wish: false, specs: [['Глубина','1000 мм'],['Высота','920 мм']] },
+  { badges: ['hit'],         price: '24 500', old_price: '',        wish: true,  specs: [['Ширина','460 мм'],['Высота','920 мм']] },
+  { badges: ['sale'],        price: '18 990', old_price: '24 500', wish: false, specs: [['Глубина','800 мм'],['Ширина','420 мм'],['Высота','900 мм']] },
+  { badges: ['hit', 'new'],  price: '31 990', old_price: '',        wish: false, specs: [['Глубина','1000 мм'],['Ширина','460 мм']] },
+  { badges: ['sale', 'hit'], price: '22 500', old_price: '30 000', wish: true,  specs: [['Глубина','1000 мм'],['Ширина','460 мм'],['Высота','920 мм']] },
+  { badges: ['new'],         price: '35 000', old_price: '',        wish: false, specs: [['Глубина','1200 мм'],['Ширина','500 мм']] },
+  { badges: ['sale'],        price: '15 900', old_price: '21 000', wish: true,  specs: [['Ширина','380 мм'],['Высота','840 мм']] },
+  { badges: ['hit'],         price: '29 500', old_price: '',        wish: false, specs: [['Глубина','950 мм'],['Ширина','440 мм'],['Высота','910 мм']] }
+] %}
+{% include "partials/product-slider.twig" with { title: 'Популярные товары', products: products } only %}

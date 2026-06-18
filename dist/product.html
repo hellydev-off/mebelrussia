@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Название товара — Мой магазин</title>
+
+  
+  <link rel="stylesheet" href="/css/swiper-bundle.min.css">
+  
+  <link rel="stylesheet" href="/css/main.css">
+
+  </head>
+<body class="">
+
+  
+  <div id="alert" aria-live="polite"></div>
+
+  <div id="top">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="topbar-inner">
+          <div class="topbar-stores">
+            <a href="/contacts.html" class="topbar-stores__link">
+              <img src="/images/nav_map.svg" alt="" />
+              <span>Наши магазины</span>
+              <img src="/images/nav_arrow.svg" class="topbar-arrow" alt="" />
+            </a>
+          </div>
+
+          <nav class="topbar-nav">
+            <div class="topbar-dropdown">
+              <a href="#" class="topbar-dropdown__trigger">О нас <img src="/images/nav_arrow.svg" class="topbar-arrow" alt="" /></a>
+              <div class="topbar-dropdown__menu">
+                <a href="/about-company.html">О компании</a>
+                <a href="/contacts.html">Контакты</a>
+              </div>
+            </div>
+
+            <div class="topbar-dropdown">
+              <a href="#" class="topbar-dropdown__trigger">Доставка <img src="/images/nav_arrow.svg" class="topbar-arrow" alt="" /></a>
+              <div class="topbar-dropdown__menu">
+                <a href="/delivery.html">Доставка</a>
+                <a href="/assembly.html">Сборка</a>
+              </div>
+            </div>
+
+            <div class="topbar-dropdown">
+              <a href="#" class="topbar-dropdown__trigger">Оплата <img src="/images/nav_arrow.svg" class="topbar-arrow" alt="" /></a>
+              <div class="topbar-dropdown__menu">
+                <a href="/payment.html">Оплата</a>
+                <a href="/installment.html">Рассрочка</a>
+              </div>
+            </div>
+
+            <a href="/guarantees.html">Гарантии</a>
+            <a href="/catalog.html">Мебель на заказ</a>
+            <a href="/catalog.html" class="topbar-nav__sale"><span class="topbar-nav__sale-icon">%</span> Распродажа</a>
+          </nav>
+
+          <div class="topbar-phone topbar-dropdown">
+            <a href="#" class="topbar-dropdown__trigger">
+              <svg class="topbar-phone__icon" width="16" height="16" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328z"/>
+              </svg>
+              <strong class="topbar-phone__text">8 (812) 703-88-57</strong>
+              <img src="/images/nav_arrow.svg" class="topbar-arrow topbar-phone__arrow" alt="" />
+            </a>
+
+            <div class="topbar-dropdown__menu topbar-dropdown__menu--phone">
+              <a href="#" class="topbar-dropdown__contact-link">
+                <span class="topbar-dropdown__contact-icon">
+                  <svg width="28" height="28" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="#25D366">
+                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/>
+                  </svg>
+                </span>
+                WhatsApp
+              </a>
+
+              <a href="#" class="topbar-dropdown__contact-link">
+                <span class="topbar-dropdown__contact-icon">
+                  <svg width="28" height="28" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="#2AABEE">
+                    <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/>
+                  </svg>
+                </span>
+                Telegram
+              </a>
+
+              <a href="#" class="topbar-dropdown__contact-link">
+                <span class="topbar-dropdown__contact-icon">
+                  <svg width="28" height="28" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="#7360F2">
+                    <path d="M11.997 0C5.373 0 0 5.373 0 12s5.372 12 11.997 12C18.625 24 24 18.627 24 12S18.625 0 11.997 0zM17.86 16.73c-.21.33-.53.5-.87.5-.17 0-.35-.04-.52-.13-1.15-.65-2.42-1.01-3.77-1.06v1.6c0 .54-.31 1.02-.8 1.24-.16.08-.33.11-.5.11-.35 0-.68-.13-.93-.38l-2.68-2.68a1.354 1.354 0 0 1 0-1.91l2.68-2.68c.37-.37.92-.48 1.4-.26.49.22.8.7.8 1.24v1.54c1.01.04 1.99.24 2.92.6V9.17H9.14V7.7h7.28v7.68c.36.29.6.72.61 1.19 0 .06-.01.11-.02.16.03.01.05.02.07.04.38.24.51.76.27 1.16l-.47-.03z"/>
+                  </svg>
+                </span>
+                Viber
+              </a>
+
+              <a href="mailto:zakaz@mebelrussian.ru" class="topbar-dropdown__contact-link">
+                <span class="topbar-dropdown__contact-icon">
+                  <svg width="28" height="28" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="24" height="24" rx="5" fill="#4A90D9"/>
+                    <path d="M4 7h16v10H4V7zm0 0l8 6 8-6" stroke="white" stroke-width="1.5" fill="none" stroke-linejoin="round"/>
+                  </svg>
+                </span>
+                zakaz@mebelrussian.ru
+              </a>
+
+              <a href="#" class="topbar-dropdown__contact-link topbar-dropdown__contact-callback">
+                <span class="topbar-dropdown__contact-icon">
+                  <svg width="28" height="28" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="24" height="24" rx="12" fill="#eaf2f8"/>
+                    <path d="M8.654 6.328a.678.678 0 0 0-1.015-.063L6.605 7.3c-.483.484-.661 1.169-.45 1.77a12.568 12.568 0 0 0 2.981 4.722 12.569 12.569 0 0 0 4.722 2.981c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-1.64-1.28a.678.678 0 0 0-.58-.122l-1.564.391a1.245 1.245 0 0 1-1.184-.328l-1.78-1.779a1.245 1.245 0 0 1-.329-1.184l.391-1.563a.678.678 0 0 0-.122-.58L8.654 6.328z" fill="#3dacd2"/>
+                  </svg>
+                </span>
+                <strong>Заказать обратный звонок</strong>
+              </a>
+
+              <div class="topbar-dropdown__divider"></div>
+
+              <div class="topbar-dropdown__phone-info">
+                <strong>8 (812) 703-88-57</strong>
+                <span>На связи ежедневно</span>
+                <span>пн-вс 09:00-20:00</span>
+              </div>
+
+              <div class="topbar-dropdown__divider"></div>
+
+              <a href="contacts.html" class="topbar-dropdown__contacts-link">Контакты</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <div id="header">
+  <div class="container">
+    <div class="header-inner">
+      <button class="header-burger" type="button" data-mobile-menu-open aria-label="Открыть меню">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <div class="header-logo">
+        <a href="/index.html">
+          <img src="/images/header_logo.png" alt="Мебель из России" />
+        </a>
+      </div>
+
+      <button class="header-catalog-btn" type="button">
+        <img src="/images/nav_catalog.svg" alt="" />
+        <span class="header-catalog-btn__text">Каталог</span>
+      </button>
+
+      <div class="header-search">
+        <input type="text" name="search" placeholder="Умный поиск" autocomplete="off" />
+        <button type="button" class="header-search__btn">
+          <img src="/images/nav_search.svg" alt="" />
+        </button>
+      </div>
+
+      <div class="header-actions">
+        <a href="/account.html" class="header-action">
+          <img src="/images/nav_user.svg" alt="" />
+          <span>Войти</span>
+        </a>
+        <a href="/wishlist.html" class="header-action">
+          <img src="/images/nav_heart.svg" alt="" />
+          <span>Избранное</span>
+        </a>
+        <a href="/cart.html" class="header-action">
+          <img src="/images/nav_basket.svg" alt="" />
+          <span>Корзина</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+  
+<div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+  <div class="mobile-menu__overlay" data-mobile-menu-close></div>
+
+  <aside class="mobile-menu__panel" role="dialog" aria-label="Меню навигации">
+    <div class="mobile-menu__head">
+      <a href="/index.html" class="mobile-menu__logo">
+        <img src="/images/header_logo.png" alt="Мебель из России" />
+      </a>
+      <button class="mobile-menu__close" type="button" data-mobile-menu-close aria-label="Закрыть меню">
+        &times;
+      </button>
+    </div>
+
+    <nav class="mobile-menu__nav">
+      <a href="/index.html" class="mobile-menu__link">Главная</a>
+      <a href="/catalog.html" class="mobile-menu__link">Каталог</a>
+
+      <button class="mobile-menu__group" type="button">
+        О нас <img src="/images/nav_arrow.svg" class="mobile-menu__chevron" alt="" />
+      </button>
+      <div class="mobile-menu__submenu">
+        <a href="/about-company.html">О компании</a>
+        <a href="/contacts.html">Контакты</a>
+      </div>
+
+      <button class="mobile-menu__group" type="button">
+        Доставка и сборка <img src="/images/nav_arrow.svg" class="mobile-menu__chevron" alt="" />
+      </button>
+      <div class="mobile-menu__submenu">
+        <a href="/delivery.html">Доставка</a>
+        <a href="/assembly.html">Сборка</a>
+      </div>
+
+      <button class="mobile-menu__group" type="button">
+        Оплата <img src="/images/nav_arrow.svg" class="mobile-menu__chevron" alt="" />
+      </button>
+      <div class="mobile-menu__submenu">
+        <a href="/payment.html">Оплата</a>
+        <a href="/installment.html">Рассрочка</a>
+      </div>
+
+      <a href="/guarantees.html" class="mobile-menu__link">Гарантии</a>
+      <a href="/catalog.html" class="mobile-menu__link mobile-menu__link--sale">Распродажа</a>
+    </nav>
+
+    <div class="mobile-menu__actions">
+      <a href="/account.html"><img src="/images/nav_user.svg" alt="" /> Войти</a>
+      <a href="/wishlist.html"><img src="/images/nav_heart.svg" alt="" /> Избранное</a>
+      <a href="/cart.html"><img src="/images/nav_basket.svg" alt="" /> Корзина</a>
+    </div>
+
+    <div class="mobile-menu__contacts">
+      <a href="tel:+78127038857" class="mobile-menu__phone">8 (812) 703-88-57</a>
+      <span>Ежедневно, 09:00–20:00</span>
+    </div>
+  </aside>
+</div>
+
+  <main id="main-content">
+    <div class="container" style="margin-top:20px; margin-bottom:40px;">
+
+  <ol class="breadcrumb">
+    <li><a href="/index.html">Главная</a></li>
+    <li><a href="/catalog.html">Каталог</a></li>
+    <li class="active">Название товара</li>
+  </ol>
+
+  
+            
+  <div class="row">
+
+    
+    
+    
+    <div id="content" class="col-sm-12">
+      <div class="row">
+
+        
+        <div class="col-sm-6">
+          <a href="#" class="thumbnail" style="margin-bottom:10px;">
+            <img src="https://placehold.co/500x400/e8e8e8/aaa?text=Фото+товара"
+                 alt="Фото товара" class="img-responsive">
+          </a>
+          <div class="row">
+            <div class="col-xs-4">
+              <a href="#" class="thumbnail">
+                <img src="https://placehold.co/150x120/ddd/aaa?text=Фото+1" class="img-responsive">
+              </a>
+            </div>
+            <div class="col-xs-4">
+              <a href="#" class="thumbnail">
+                <img src="https://placehold.co/150x120/ddd/aaa?text=Фото+2" class="img-responsive">
+              </a>
+            </div>
+            <div class="col-xs-4">
+              <a href="#" class="thumbnail">
+                <img src="https://placehold.co/150x120/ddd/aaa?text=Фото+3" class="img-responsive">
+              </a>
+            </div>
+          </div>
+        </div>
+
+        
+        <div class="col-sm-6">
+          <h1 style="font-size:22px; margin-top:0;">Название товара</h1>
+
+          <ul class="list-unstyled" style="font-size:13px; color:#777; margin:10px 0;">
+            <li><strong>Артикул:</strong> SKU-001</li>
+            <li><strong>Наличие:</strong> <span class="label label-success">В наличии</span></li>
+            <li><strong>Бренд:</strong> <a href="#">Samsung</a></li>
+          </ul>
+
+          <hr>
+
+          <div class="price" style="font-size:26px; font-weight:700; color:#2c6fad; margin:15px 0;">
+            14 990 ₽
+            <small style="font-size:16px; color:#999; text-decoration:line-through; margin-left:8px;">
+              17 990 ₽
+            </small>
+          </div>
+
+          
+          <div class="form-group">
+            <label>Количество:</label>
+            <div class="input-group" style="width:120px;">
+              <span class="input-group-btn">
+                <button class="btn btn-default qty-btn" data-action="minus" type="button">−</button>
+              </span>
+              <input type="number" class="form-control text-center" value="1" min="1">
+              <span class="input-group-btn">
+                <button class="btn btn-default qty-btn" data-action="plus" type="button">+</button>
+              </span>
+            </div>
+          </div>
+
+          <div style="margin-top:15px; display:flex; gap:8px; flex-wrap:wrap;">
+            <button type="button" class="btn btn-primary btn-lg">
+              <span class="glyphicon glyphicon-shopping-cart"></span> В корзину
+            </button>
+            <button type="button" class="btn btn-default btn-lg" title="В список желаний">
+              <span class="glyphicon glyphicon-heart"></span>
+            </button>
+            <button type="button" class="btn btn-default btn-lg" title="Сравнить">
+              <span class="glyphicon glyphicon-transfer"></span>
+            </button>
+          </div>
+
+          <hr>
+
+          
+          <div class="panel panel-default">
+            <div class="panel-heading"><strong>Описание</strong></div>
+            <div class="panel-body" style="font-size:13px; line-height:1.7;">
+              Краткое описание товара. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              Ut enim ad minim veniam, quis nostrud exercitation.
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    
+    
+  </div>
+</div>
+  </main>
+
+
+  <section class="mailing">
+
+  
+  <img src="/images/index/mailing/percent-pink.png"   alt="" class="mailing__abs-icon mailing__abs-icon--pink" />
+  <img src="/images/index/mailing/percent-select.png" alt="" class="mailing__abs-icon mailing__abs-icon--select" />
+
+  
+  <div class="mailing__left">
+    <img src="/images/index/mailing/percent-circle.png" alt="" class="mailing__decor-img mailing__decor-img--percent-circle" />
+    <img src="/images/index/mailing/lightning.png"      alt="" class="mailing__decor-img mailing__decor-img--lightning-1" />
+    <img src="/images/index/mailing/lightning.png"      alt="" class="mailing__decor-img mailing__decor-img--lightning-2" />
+    <img src="/images/index/mailing/lightning.png"      alt="" class="mailing__decor-img mailing__decor-img--lightning-3" />
+    <img src="/images/index/mailing/megaphone.png"      alt="" class="mailing__decor-img mailing__decor-img--megaphone" />
+  </div>
+
+  
+  <div class="mailing__body">
+    <h2 class="mailing__title">
+      Узнай <span class="mailing__pink">об акции</span> <span class="mailing__teal">первым!</span>
+    </h2>
+    <p class="mailing__sub">Подпишись на нашу рассылку</p>
+
+    <div class="mailing__form-area">
+      <div class="mailing__white-box">
+        <div class="mailing__toggle">
+          <label class="mailing__toggle-label">
+            <input type="radio" name="mailing_type" value="email" checked class="mailing__radio" />
+            <span class="mailing__toggle-dot"></span>
+            Email
+          </label>
+          <label class="mailing__toggle-label">
+            <input type="radio" name="mailing_type" value="sms" class="mailing__radio" />
+            <span class="mailing__toggle-dot"></span>
+            SMS
+          </label>
+        </div>
+        <input type="email" class="mailing__input" placeholder="Введите ваш email" />
+      </div>
+
+      <button class="mailing__btn" type="submit">Подписаться</button>
+
+      <label class="mailing__agree-label">
+        <input type="checkbox" class="mailing__checkbox" />
+        <span class="mailing__agree-text">
+          Даю согласие на получение рекламных рассылок и соглашаюсь
+          с <a href="#">условиями обработки и использования персональных данных</a>
+        </span>
+      </label>
+
+      <label class="mailing__unsub">
+        <input type="checkbox" class="mailing__checkbox" />
+        <a href="#">Отписаться</a>
+      </label>
+    </div>
+  </div>
+
+
+</section>
+  <footer id="footer">
+  <div class="container">
+    <div class="row">
+
+      <div class="col-sm-3 footer-brand">
+        <a href="/index.html" class="footer-logo">
+          <img src="/images/header_logo.png" alt="Мебель из России" />
+        </a>
+
+        <ul class="footer-contacts">
+          <li>
+            <span class="footer-icon">
+              <img src="/images/footer/phone.png" alt="" />
+            </span>
+            <a href="tel:+78127038857"><strong>8 812 703-88-57</strong></a>
+          </li>
+          <li>
+            <span class="footer-icon">
+              <img src="/images/footer/clock.png" alt="" />
+            </span>
+            Пн-Пт 09:00–20:00
+          </li>
+          <li>
+            <span class="footer-icon">
+              <img src="/images/footer/mail.png" alt="" />
+            </span>
+            <a href="mailto:zakaz@mebelrussian.ru">zakaz@mebelrussian.ru</a>
+          </li>
+        </ul>
+
+        <a href="https://vk.com/mebelrussian" class="footer-vk-btn" target="_blank" rel="noopener">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24">
+            <path fill="currentColor" d="M11.701 18.771H12.7c.34 0 .469-.14.469-.468V14.84c-.006-.434.11-.612.424-.612.282 0 .651.32 1.441 1.117 1.316 1.926 1.706 3.955 2.696 3.955l3.116.007c.889 0 1.284-.434.893-1.184-.288-.572-1.07-1.463-1.962-2.41-1.17-1.302-1.098-1.19.372-3.048.801-1.059 1.8-2.492 1.8-2.492.395-.639.143-1.228-.633-1.228h-3.116c-.597 0-.835.356-1.152 1.058-.78 1.799-2.225 3.524-2.7 3.22-.3-.19-.271-.782-.271-2.118V9.7c0-.895-.262-1.412-1.147-1.412H9.612c-.631 0-1.008.479-1.008.884 0 .895.906.975 1.017 3.11.034.674 0 1.81-.43 2.053-.58.328-1.548-.747-2.3-1.965C6.19 11.25 5.68 9.81 5.28 9.29c-.223-.292-.519-.49-1.038-.49H1.126c-.504 0-.672.24-.672.548 0 .586.94 2.777 4.14 6.254C7.254 18.069 9.4 18.771 11.701 18.771z"/>
+          </svg>
+          Группа Вконтакте
+        </a>
+
+        <div class="footer-payments">
+          <img src="/images/footer/visa.png" alt="VISA" />
+          <img src="/images/footer/mir.png" alt="МИР" />
+          <img src="/images/footer/me.png" alt="Maestro" />
+          <img src="/images/footer/mc.png" alt="MasterCard" />
+        </div>
+      </div>
+
+      <div class="col-sm-3 footer-nav">
+        <h5>Каталог</h5>
+        <div class="footer-nav__links">
+          <a href="/catalog.html">Кухня</a>
+          <a href="/catalog.html">Гостиная</a>
+          <a href="/catalog.html">Мягкая мебель</a>
+          <a href="/catalog.html">Шкафы</a>
+          <a href="/catalog.html">Спальня</a>
+          <a href="/catalog.html">Детская</a>
+          <a href="/catalog.html">Прихожая</a>
+          <a href="/catalog.html">Офис</a>
+          <a href="/catalog.html">Матрасы</a>
+          <a href="/catalog.html">Комоды</a>
+        </div>
+      </div>
+
+      <div class="col-sm-3 footer-nav">
+        <h5>Покупателям</h5>
+        <div class="footer-nav__links">
+          <a href="/delivery.html">Доставка</a>
+          <a href="/payment.html">Оплата</a>
+          <a href="/assembly.html">Сборка</a>
+          <a href="/installment.html">Рассрочка</a>
+          <a href="/guarantees.html">Гарантии</a>
+          <a href="/contacts.html">Контакты</a>
+        </div>
+      </div>
+
+      <div class="col-sm-3 footer-nav">
+        <h5>Компания</h5>
+        <div class="footer-nav__links">
+          <a href="/about-company.html">О компании</a>
+          <a href="/contacts.html">Магазины</a>
+          <a href="/guarantees.html">Гарантии</a>
+          <a href="/payment.html">Оплата</a>
+          <a href="/delivery.html">Доставка</a>
+          <a href="/catalog.html">Каталог товаров</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div class="container">
+      &copy; 2014–2026 «Мебель из России» — онлайн-гипермаркет недорогой мебели
+    </div>
+  </div>
+</footer>
+
+  <script src="/js/bundle.js"></script>
+  
+</body>
+</html>

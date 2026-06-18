@@ -1,0 +1,492 @@
+// ── Страница оплаты ───────────────────────────────────────────────────────────
+
+$py-teal: #3dacd2;
+$py-pink: #ec4d76;
+$py-pink-bg: #fdf0f3;
+$py-pink-border: #f5c6d4;
+$py-blue-bg: #eef6fb;
+$py-blue-border: #72b0d7;
+
+// ── Page wrapper ──────────────────────────────────────────────────────────────
+.py-page {
+  padding: 36px 0 60px;
+}
+
+.py-h1-spacer {
+  margin-top: 60px;
+}
+
+// ── Notice banner (розовый, с крючком внизу слева) ───────────────────────────
+.py-notice {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: $py-pink-bg;
+  // закруглены все углы кроме нижнего левого — там крючок
+  border-radius: 16px 16px 16px 0;
+  padding: 22px 32px;
+  margin-bottom: 44px;
+  position: relative;
+
+  // крючок — треугольник, прижатый к нижнему левому углу
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: -22px;
+    left: 0;
+    width: 24px;
+    height: 22px;
+    background: $py-pink-bg;
+    clip-path: polygon(0 0, 100% 0, 0 100%);
+  }
+
+  &__icon {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__text {
+    font-size: 18px;
+    font-weight: 700;
+    color: $py-pink;
+  }
+}
+
+// ── Section title (бирюзовый H2) ─────────────────────────────────────────────
+.py-section-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: $py-pink;
+  margin: 0 0 24px;
+}
+
+// ── Payment cards (3 колонки с фото + оверлей) ────────────────────────────────
+.py-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-bottom: 28px;
+}
+
+.py-card {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+
+  &__img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+    aspect-ratio: 4 / 3;
+  }
+
+  &__overlay {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  &__num {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 20px;
+    font-size: 18px;
+    font-weight: 700;
+    color: #fff;
+
+    flex-shrink: 0;
+    border: 1px solid #fff;
+  }
+
+  &__label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #fff;
+    line-height: 1.35;
+  }
+}
+
+// ── Details section (3 col, aligned to cards above) ──────────────────────────
+.py-pay-details {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-bottom: 48px;
+
+  .about__text:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.py-phone-bold {
+  font-size: 16px;
+  font-weight: 800;
+  color: $text-color;
+}
+
+// ── Payment method logos ──────────────────────────────────────────────────────
+.py-pay-methods {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+
+  &__logo {
+    height: 28px;
+    width: auto;
+    display: block;
+  }
+}
+
+// ── Legal entity full-width card ──────────────────────────────────────────────
+.py-legal-card {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  margin-bottom: 20px;
+
+  &__img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+    aspect-ratio: 21 / 7;
+  }
+
+  .py-card__overlay--top {
+    top: 20px;
+    left: 20px;
+  }
+}
+
+// ── Return info page H1 spacing ───────────────────────────────────────────────
+// ── Return section header (number badge + uppercase title) ────────────────────
+.py-return-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+  margin-top: 40px;
+  padding-bottom: 0;
+
+  &--multiline {
+    align-items: flex-start;
+  }
+}
+
+.py-return-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  border: 2px solid $py-teal;
+  background: #fff;
+  font-size: 18px;
+  font-weight: 700;
+  color: $py-teal;
+  flex-shrink: 0;
+}
+
+.py-return-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: $py-teal;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  line-height: 1.4;
+}
+
+// ── Return section (image + text, 2 col) ──────────────────────────────────────
+.py-return-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 36px;
+  align-items: start;
+  margin-bottom: 20px;
+
+  &--img-right {
+    // default: img-col is second child → stays right
+  }
+
+  &__img-col {
+    border-radius: 16px;
+    overflow: hidden;
+  }
+
+  &__img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+    border-radius: 16px;
+    aspect-ratio: 4 / 3;
+  }
+
+  &__text {
+    .about__text:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+// ── Alert / attention box (розовая) ──────────────────────────────────────────
+.py-alert {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  background: #fff;
+  border: 1px solid $py-pink-border;
+  border-radius: 16px;
+  padding: 20px 24px;
+  margin: 24px 0 40px;
+
+  &--bottom {
+    margin-bottom: 0;
+  }
+
+  &__icon {
+    color: $py-pink;
+    flex-shrink: 0;
+    display: flex;
+    margin-top: 1px;
+  }
+
+  &__text {
+    font-size: 18px;
+    line-height: 1.65;
+    color: $py-pink;
+
+    strong {
+      color: $py-pink;
+    }
+  }
+}
+
+// ── Dot list (розовые кружки) ─────────────────────────────────────────────────
+.py-dot-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px;
+
+  li {
+    position: relative;
+    padding-left: 28px;
+    margin-bottom: 18px;
+    font-size: 14px;
+    line-height: 1.65;
+    color: $text-color;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 4px;
+      top: 7px;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      border: 2px solid $py-pink;
+      background: transparent;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+// ── SSL section (text left + image right) ─────────────────────────────────────
+.py-ssl-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: start;
+  margin-bottom: 48px;
+
+  &__text {
+    .about__text:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__img-col {
+    background: #f0f4f8;
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__img {
+    width: 100%;
+    display: block;
+    border-radius: 12px;
+    object-fit: cover;
+  }
+}
+
+// ── Features box (синий блок с крючком сверху слева) ──────────────────────────
+.py-features-box {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  background: rgb(234, 242, 248);
+  // все углы скруглены, кроме верхнего левого — там крючок
+  border-radius: 0 16px 16px 16px;
+  padding: 24px 28px;
+  margin-top: 4px; // крючок выступает выше блока, margin не нужен
+  margin-bottom: 32px;
+  position: relative;
+
+  // крючок — треугольник в верхнем левом углу, острие направлено вверх-влево
+  &::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    background: rgb(234, 242, 248);
+    clip-path: polygon(0 0, 0 100%, 100% 100%);
+  }
+
+  &__asterisk {
+    font-size: 22px;
+    font-weight: 700;
+    color: $py-pink;
+    flex-shrink: 0;
+    line-height: 1.4;
+  }
+
+  .about__text {
+    margin: 0;
+  }
+}
+
+// ── Refusal heading ───────────────────────────────────────────────────────────
+.py-refusal-title {
+  font-size: 17px;
+  font-weight: 700;
+  color: $text-color;
+  margin: 0 0 20px;
+}
+
+// ── Responsive: tablet ────────────────────────────────────────────────────────
+@media (max-width: 991px) {
+  .py-cards {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .py-pay-details {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  .py-return-section,
+  .py-ssl-section {
+    grid-template-columns: 1fr;
+    gap: 24px;
+
+    &--img-right .py-return-section__img-col {
+      order: -1;
+    }
+  }
+
+  .py-legal-card__img {
+    aspect-ratio: 16 / 6;
+  }
+
+  // крупный текст чуть меньше на планшете
+  .py-page .about__text {
+    font-size: 16px;
+  }
+
+  .py-alert__text {
+    font-size: 16px;
+  }
+
+  .py-notice__text {
+    font-size: 16px;
+  }
+}
+
+// ── Responsive: mobile ────────────────────────────────────────────────────────
+@media (max-width: 767px) {
+  // детали оплаты в 1 колонку — длинный текст не влезает в 2
+  .py-pay-details {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}
+
+@media (max-width: 575px) {
+  .py-page {
+    padding: 24px 0 40px;
+  }
+
+  .py-cards {
+    grid-template-columns: 1fr;
+  }
+
+  // длинный текст — уменьшаем до читаемого размера на узком экране
+  .py-page .about__text {
+    font-size: 14px;
+    line-height: 1.65;
+  }
+
+  .py-alert {
+    padding: 14px 16px;
+    gap: 10px;
+    border-radius: 12px;
+
+    &__text {
+      font-size: 14px;
+    }
+  }
+
+  .py-notice {
+    padding: 16px 20px;
+    gap: 12px;
+
+    &__text {
+      font-size: 15px;
+    }
+  }
+
+  .py-return-header {
+    gap: 12px;
+  }
+
+  .py-return-num {
+    min-width: 36px;
+    height: 36px;
+    font-size: 16px;
+  }
+
+  .py-return-title {
+    font-size: 13px;
+  }
+
+  .py-ssl-section {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .py-features-box {
+    padding: 18px 16px;
+    gap: 12px;
+  }
+
+  .py-h1-spacer {
+    margin-top: 36px;
+  }
+}

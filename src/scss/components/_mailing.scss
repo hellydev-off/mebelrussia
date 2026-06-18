@@ -1,0 +1,347 @@
+.mailing {
+  background: #dff0f8;
+  display: grid;
+  grid-template-columns: 300px 1fr 230px;
+  align-items: stretch;
+  min-height: 300px;
+  position: relative;
+  overflow: hidden;
+}
+
+// ── Левая колонка (декор) ─────────────────────────────────────────────────────
+.mailing__left {
+  position: relative;
+}
+
+.mailing__decor-img {
+  position: absolute;
+
+  // Громкоговоритель — большой, прижат к низу и левому краю, сильно обрезан снизу
+  &--megaphone {
+    width: 200px;
+    bottom: -50px;
+    left: 160px;
+  }
+
+  // % в синем круге — верхний левый угол
+  &--percent-circle {
+    width: 70px;
+    top: 22px;
+    left: 150px;
+  }
+
+  // Молнии вылетают из рупора (верхняя правая часть мегафона), все под одним углом
+  &--lightning-1 {
+    width: 26px;
+    top: 70px;
+    left: 340px;
+    transform: rotate(-170deg);
+  }
+
+  &--lightning-2 {
+    width: 26px;
+    top: 140px;
+    left: 380px;
+    transform: rotate(-130deg);
+  }
+
+  &--lightning-3 {
+    width: 26px;
+    top: 220px;
+    left: 390px;
+    transform: rotate(-100deg);
+  }
+}
+
+// ── Центральный блок ──────────────────────────────────────────────────────────
+.mailing__body {
+  padding: 24px 24px 24px 160px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.mailing__title {
+  font-weight: 800;
+  margin: 0 0 4px;
+}
+
+.mailing__pink {
+  color: #ec4d76;
+}
+.mailing__teal {
+  color: #3dacd2;
+}
+
+.mailing__sub {
+  font-size: 16px;
+  color: $text-color;
+  margin: 0 0 12px;
+}
+
+// Сетка 2×2: [инпут][кнопка] / [согласие][отписаться]
+.mailing__form-area {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-rows: auto auto;
+  column-gap: 20px;
+  row-gap: 10px;
+}
+
+// % иконки — абсолютно, правый верхний угол секции
+.mailing__abs-icon {
+  position: absolute;
+
+  &--pink {
+    width: 52px;
+    top: 24px;
+    right: 240px;
+  }
+
+  &--select {
+    width: 88px;
+    top: 20px;
+    right: 140px;
+  }
+}
+
+// Белый блок с переключателем и инпутом
+.mailing__white-box {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px 18px;
+  gap: 8px;
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.mailing__toggle {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.mailing__toggle-label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 15px;
+  font-weight: 600;
+  color: $text-color;
+  cursor: pointer;
+  margin: 0;
+  white-space: nowrap;
+}
+
+.mailing__radio {
+  display: none;
+}
+
+.mailing__toggle-dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 2px solid #c0d4de;
+  display: inline-block;
+  flex-shrink: 0;
+  transition:
+    background 0.2s,
+    border-color 0.2s;
+}
+
+.mailing__radio:checked + .mailing__toggle-dot {
+  background: #3dacd2;
+  border-color: #3dacd2;
+}
+
+.mailing__input {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 15px;
+  color: $text-color;
+  background: transparent;
+  min-width: 0;
+
+  &::placeholder {
+    color: #b0c4ce;
+  }
+}
+
+// Согласие
+.mailing__agree-label {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  cursor: pointer;
+  margin: 0;
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.mailing__checkbox {
+  width: 15px;
+  height: 15px;
+  flex-shrink: 0;
+  margin-top: 2px;
+  accent-color: #3dacd2;
+  cursor: pointer;
+}
+
+.mailing__agree-text {
+  font-size: 13px;
+  line-height: 1.5;
+  color: $text-color;
+
+  a {
+    color: #3dacd2;
+    text-decoration: underline;
+  }
+}
+
+// ── Правая колонка: % иконки + отписаться ────────────────────────────────────
+.mailing__right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 22px 24px 28px 12px;
+}
+
+.mailing__right-icons {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.mailing__right-icon {
+  &--pink {
+    width: 50px;
+  }
+
+  &--select {
+    width: 82px;
+  }
+}
+
+.mailing__btn {
+  background: #3dacd2;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  border: none;
+  border-radius: 12px;
+  padding: 0 40px;
+  cursor: pointer;
+  transition: background 0.2s;
+  white-space: nowrap;
+  grid-column: 2;
+  grid-row: 1;
+
+  &:hover {
+    background: darken(#3dacd2, 8%);
+  }
+}
+
+.mailing__unsub {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  grid-column: 2;
+  grid-row: 2;
+  align-self: center;
+  cursor: pointer;
+  margin: 0;
+
+  a {
+    font-size: 14px;
+    color: $text-color;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+      color: $text-color;
+    }
+  }
+}
+
+// ── Адаптив: планшет (768–991px) ─────────────────────────────────────────────
+@media (max-width: 991px) {
+  .mailing {
+    grid-template-columns: 1fr;
+  }
+
+  .mailing__left {
+    display: none;
+  }
+
+  .mailing__body {
+    padding: 36px 40px 32px;
+  }
+
+  .mailing__abs-icon {
+    display: none;
+  }
+}
+
+// ── Адаптив: мобильный (< 768px) ─────────────────────────────────────────────
+@media (max-width: 767px) {
+  .mailing__body {
+    padding: 28px 20px 24px;
+  }
+
+  .mailing__title {
+    font-size: 24px;
+  }
+
+  .mailing__sub {
+    font-size: 14px;
+    margin-bottom: 16px;
+  }
+
+  .mailing__form-area {
+    grid-template-columns: 1fr;
+  }
+
+  .mailing__btn {
+    grid-column: 1;
+    grid-row: 2;
+    padding: 14px 20px;
+    width: 100%;
+  }
+
+  .mailing__agree-label {
+    grid-column: 1;
+    grid-row: 3;
+  }
+
+  .mailing__unsub {
+    grid-column: 1;
+    grid-row: 4;
+  }
+}
+
+// ── Адаптив: маленький телефон (< 480px) ────────────────────────────────────
+@media (max-width: 479px) {
+  .mailing__white-box {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .mailing__toggle {
+    width: 100%;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #d4e8f2;
+  }
+
+  .mailing__input {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  .mailing__title {
+    font-size: 20px;
+  }
+}

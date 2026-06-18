@@ -1,0 +1,282 @@
+{% extends "layouts/base.twig" %}
+
+{% block title %}О компании — {{ siteName }}{% endblock %}
+
+{% block content %}
+<section class="co-page">
+  <div class="container">
+
+    {# Breadcrumbs #}
+    <ol class="breadcrumb co-breadcrumb">
+      <li><a href="/">Главная</a></li>
+      <li class="active">О компании</li>
+    </ol>
+
+    <h1 class="co-page__h1">О компании</h1>
+
+    {# ── Intro: photo + info card ── #}
+    <div class="co-intro">
+      <div class="co-intro__photo">
+        <img src="/images/about/about_block.png" alt="Мебель из России" class="co-intro__img" />
+      </div>
+      <div class="co-intro__right">
+        <p class="co-intro__desc">
+          <strong>Мебель из России</strong> – большой магазин, который продает товары для дома, офиса или дачи.
+          В каталоге представлен разный ассортимент мебели для кухни, спален, прихожих, гостиных и других помещений.
+          Выбор сделать можно, перейдя по ссылкам ниже.
+        </p>
+        <div class="co-info-card">
+          <div class="co-info-card__row">
+            <span class="co-info-card__label">ИП</span>
+            <span class="co-info-card__value">Дмитриев Юрий Сергеевич</span>
+          </div>
+          <div class="co-info-card__row">
+            <span class="co-info-card__label">ИНН</span>
+            <span class="co-info-card__value">780433269058</span>
+          </div>
+          <div class="co-info-card__row">
+            <span class="co-info-card__label">ОГРНИП</span>
+            <span class="co-info-card__value">321784700216081</span>
+          </div>
+          <div class="co-info-card__row">
+            <span class="co-info-card__label">Телефон</span>
+            <div class="co-info-card__cell">
+              <span class="co-info-card__value">+7 (812) 988-98-37</span>
+              <a href="#" class="co-info-card__btn">заказать обр звонок</a>
+            </div>
+          </div>
+          <div class="co-info-card__row co-info-card__row--last">
+            <span class="co-info-card__label">Почта</span>
+            <div class="co-info-card__cell">
+              <span class="co-info-card__value">zakaz@mebelrussia.ru</span>
+              <a href="mailto:zakaz@mebelrussia.ru" class="co-info-card__btn">написать нам</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    {# ── Category grid (9 tiles, 3×3) ── #}
+    <div class="co-cat-grid">
+      <a href="#" class="co-cat-tile">
+        <img src="/images/about/chests.png" alt="Комоды" class="co-cat-tile__img" />
+        <span class="co-cat-tile__label">
+          Комоды
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="2.2"
+                  stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </span>
+      </a>
+      <a href="#" class="co-cat-tile">
+        <img src="/images/about/living.png" alt="Мебель для гостинной" class="co-cat-tile__img" />
+        <span class="co-cat-tile__label">
+          Мебель для гостинной
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="2.2"
+                  stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </span>
+      </a>
+      <a href="#" class="co-cat-tile">
+        <img src="/images/about/bedroom.png" alt="Мебель для спальной" class="co-cat-tile__img" />
+        <span class="co-cat-tile__label">
+          Мебель для спальной
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="2.2"
+                  stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </span>
+      </a>
+      <a href="#" class="co-cat-tile">
+        <img src="/images/about/mattresses.png" alt="Матрасы" class="co-cat-tile__img" />
+        <span class="co-cat-tile__label">
+          Матрасы
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="2.2"
+                  stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </span>
+      </a>
+      <a href="#" class="co-cat-tile">
+        <img src="/images/about/soft.png" alt="Мягкая мебель" class="co-cat-tile__img" />
+        <span class="co-cat-tile__label">
+          Мягкая мебель
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="2.2"
+                  stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </span>
+      </a>
+      <a href="#" class="co-cat-tile">
+        <img src="/images/about/children.png" alt="Мебель для детской" class="co-cat-tile__img" />
+        <span class="co-cat-tile__label">
+          Мебель для детской
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="2.2"
+                  stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </span>
+      </a>
+      <a href="#" class="co-cat-tile">
+        <img src="/images/about/cabinets.png" alt="Шкафы" class="co-cat-tile__img" />
+        <span class="co-cat-tile__label">
+          Шкафы
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="2.2"
+                  stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </span>
+      </a>
+      <a href="#" class="co-cat-tile">
+        <img src="/images/about/office.png" alt="Офис" class="co-cat-tile__img" />
+        <span class="co-cat-tile__label">
+          Офис
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="2.2"
+                  stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </span>
+      </a>
+      <a href="#" class="co-cat-tile">
+        <img src="/images/about/kitchen.png" alt="Кухни" class="co-cat-tile__img" />
+        <span class="co-cat-tile__label">
+          Кухни
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="2.2"
+                  stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </span>
+      </a>
+    </div>
+
+    {# ── Producers: Прихожие photo + text ── #}
+    <div class="co-producers">
+      <div class="co-producers__img-col">
+        <a href="#" class="co-cat-tile">
+          <img src="/images/about/hallways.png" alt="Прихожие" class="co-cat-tile__img" />
+          <span class="co-cat-tile__label">
+            Прихожие
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="2.2"
+                    stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+        </a>
+      </div>
+      <div class="co-producers__text-col">
+        <h2 class="co-producers__title">
+          Проверенные производители<br>
+          <span class="co-producers__title-bold">и качественная мебель <span class="co-producers__title-accent">по доступным ценам в СПБ</span></span>
+        </h2>
+        <p class="about__text">
+          Наша компания занимается продажей качественной мебели в Санкт-Петербурге на протяжении многих лет.
+          На протяжении этого срока нам удалось наладить сотрудничество с производителями, которым доверяют покупатели.
+          Мы стали надёжными партнёрами, поэтому предлагаем товары по доступным ценам.
+        </p>
+      </div>
+    </div>
+
+    {# ── Advantages ── #}
+    <div class="co-advantages">
+      <h2 class="about__title">Преимущества для покупателя</h2>
+      <p class="about__text">
+        Мы не являемся фирмой «однодневкой», а дорожим своей репутацией, которая завоёвывалась на протяжении многих лет.
+        Качество товаров, сервисное обслуживание и ценовая политика, не изменяются под влиянием экономической
+        нестабильности в стране. Мы доставим товар в указанные сроки в целости и сохранности.
+      </p>
+      <div class="co-adv-grid">
+
+        <div class="co-adv-card">
+          <div class="co-adv-card__icon">
+            <img src="/images/about/icons/quality.svg" alt="">
+          </div>
+          <h4 class="co-adv-card__title">Мебель высокого качества</h4>
+          <p class="co-adv-card__text">Мы работаем напрямую с производителями и гарантируем, что весь товар проходит проверку</p>
+        </div>
+
+        <div class="co-adv-card">
+          <div class="co-adv-card__icon">
+                <img src="/images/about/icons/product.svg" alt="">
+          </div>
+          <h4 class="co-adv-card__title">Большой выбор товаров разных категорий</h4>
+          <p class="co-adv-card__text">У нас можно купить меблировку для квартиры, дома, офиса и дачи.</p>
+        </div>
+
+        <div class="co-adv-card">
+          <div class="co-adv-card__icon">
+                <img src="/images/about/icons/price.svg" alt="">
+          </div>
+          <h4 class="co-adv-card__title">Низкие цены</h4>
+          <p class="co-adv-card__text">
+            Товары в нашем магазине продаются по цене ниже среднего на рынке России.
+            Большой товарооборот позволяет нам зарабатывать на продажах недорогой, но качественной мебели.
+          </p>
+        </div>
+
+        <div class="co-adv-card">
+          <div class="co-adv-card__icon">
+               <img src="/images/about/icons/discounts.svg" alt="">
+          </div>
+          <h4 class="co-adv-card__title">Скидки, кредиты.</h4>
+          <p class="co-adv-card__text">
+            Наша компания позволяет жителям СПб и Ленинградской области покупать мебель со скидкой или в кредит.
+            Если нужна мебель, сделайте выбор, а заплатите потом.
+          </p>
+        </div>
+
+      </div>
+    </div>
+
+    {# ── Guarantee ── #}
+    <div class="about-guarantee co-guarantee">
+      <div class="about-guarantee__badge">
+        <img src="/images/index/about/guarantee.png" alt="2 года гарантии" />
+      </div>
+      <div class="about-guarantee__text">
+        <p class="about__text">
+          Подбор товаров в каталоги магазина осуществляется опытными маркетологами. Ценовая политика компании
+          обеспечивает равные условия покупок людям с разным социальным статусом и финансовыми возможностями.
+        </p>
+        <p class="about__text">
+          Вся мебель доставляется по адресам покупателя с возможностью профессиональной сборки.
+          Условия доставки и сборки мебели вы можете изучить в соответствующих разделах нашего сайта.
+        </p>
+      </div>
+    </div>
+
+    {# ── Trust section ── #}
+    <div class="co-trust">
+      <div class="co-trust__img-col">
+        <img src="/images/about/trust.png" alt="Доверие покупателя" class="co-trust__img" />
+      </div>
+      <div class="co-trust__text-col">
+        <h2 class="about__title">Доверие покупателя – лучшая награда для нас</h2>
+        <p class="about__text">
+          Для улучшения обслуживания клиентов мы на протяжении многих лет собирали профессионалов, которые обладают
+          богатым опытом и высокими человеческими качествами. Они делают ту работу, которую умеют делать лучше всего!
+          В итоге мы готовы предложить вам комплексные услуги по подбору и доставке мебели.
+        </p>
+        <p class="about__text">
+          Сотрудники компании знают, что предложить клиенту, чтобы тот остался доволным. В компании существуют
+          строгие инструкции для сотрудников, чтобы те представляли полный пакет услуг. Мы придерживаемся чёткой
+          схеме обработки заказов, что увеличивает скорость и качество сервиса. Используется индивидуальный подход
+          к каждому клиенту, чтобы выяснить его пожелания и требования к товару. Это позволяет обеспечить
+          лояльность покупателя к нашему магазину мебели.
+        </p>
+      </div>
+    </div>
+
+    {# Баннер после секции: 70% ширины, прижат к правому краю, заезжает на картинку слева #}
+    <div class="co-phone-banner">
+      <p class="co-phone-banner__text">
+        Мебель привозит клиенту собственная служба доставки с грузчиками, а сборка производится профессионально.
+        Если у вас возникли вопросы, то можете задать их нам по телефону:
+      </p>
+      <a href="tel:+78129889837" class="co-phone-banner__phone">+7(812) 988-98-37</a>
+    </div>
+
+  </div>{# /container #}
+
+</section>
+{% endblock %}

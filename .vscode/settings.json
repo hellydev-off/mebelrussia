@@ -1,0 +1,30 @@
+{
+  // ── Ключевой фикс: .twig трактуется как html ──────────────────────────────
+  // Это включает встроенный HTML IntelliSense (подсказки тегов, атрибутов)
+  // Twig-расширение (mblode) поверх этого всё равно красит {{ }} и {% %}
+  "files.associations": { "*.twig": "html" },
+
+  // ── Prettier ─────────────────────────────────────────────────────────────
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[javascript]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+  "[scss]":       { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+  "[css]":        { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+  "[html]":       { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+
+  // ── Emmet ─────────────────────────────────────────────────────────────────
+  "emmet.includeLanguages": { "html": "html" },
+  "emmet.triggerExpansionOnTab": true,
+
+  // Подсказки Bootstrap-классов
+  "html-css-class-completion.enableEmmetSupport": true,
+
+  // ── Основные ─────────────────────────────────────────────────────────────
+  "editor.tabSize": 2,
+  "editor.wordWrap": "on",
+  "editor.quickSuggestions": {
+    "other": true,
+    "comments": false,
+    "strings": true
+  }
+}

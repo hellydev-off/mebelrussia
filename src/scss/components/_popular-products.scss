@@ -1,0 +1,217 @@
+.popular-products {
+  padding: 40px 0 50px;
+
+  &__head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 24px;
+  }
+
+  &__title {}
+
+  &__nav {
+    display: flex;
+    gap: 10px;
+  }
+}
+
+.pp-nav-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1.5px solid #dde3e8;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #8496a1;
+  transition:
+    border-color 0.2s,
+    color 0.2s;
+
+  &:hover {
+    border-color: $brand-primary;
+    color: $brand-primary;
+  }
+
+  &.swiper-button-disabled {
+    opacity: 0.35;
+    cursor: default;
+    pointer-events: none;
+  }
+}
+
+// ── Карточка товара ───────────────────────────────────────────────────────────
+.pp-card {
+  border-radius: 16px;
+  overflow: hidden;
+  background: #fff;
+
+  &__media {
+    position: relative;
+    background: #f2ede4;
+    padding: 20px 20px 16px;
+  }
+
+  &__wish {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    background: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    line-height: 1;
+  }
+
+  &__img {
+    display: block;
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+  }
+
+  &__badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 12px;
+  }
+
+  &__body {
+    padding: 16px 16px 20px;
+  }
+
+  &__name {
+    font-size: 14px;
+    font-weight: 500;
+    color: $text-color;
+    line-height: 1.4;
+    margin: 0 0 10px;
+    min-height: 40px;
+  }
+
+  &__meta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;
+  }
+
+  &__stars {
+    display: flex;
+    gap: 2px;
+  }
+
+  &__stock {
+    font-size: 12px;
+    font-weight: 500;
+    color: #3cba6f;
+  }
+
+  &__specs {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 16px;
+    border-top: 1px solid #f0f0f0;
+    padding-top: 10px;
+
+    li {
+      display: flex;
+      align-items: baseline;
+      font-size: 12px;
+      color: $text-color;
+      padding: 3px 0;
+    }
+  }
+
+  &__spec-name {
+    flex-shrink: 0;
+    color: #8496a1;
+  }
+
+  &__spec-val {
+    flex-shrink: 0;
+    margin-left: auto;
+    padding-left: 6px;
+  }
+
+  // Пунктирная линия между названием и значением
+  &__spec-name::after {
+    content: '';
+    display: inline-block;
+    width: 80px;
+    border-bottom: 1px dotted #d0d8de;
+    margin: 0 4px -2px 4px;
+  }
+
+  &__price {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  &__price-new {
+    font-size: 22px;
+    font-weight: 700;
+    color: $text-color;
+
+    &--sale {
+      color: #ec4d76;
+    }
+  }
+
+  &__price-old {
+    font-size: 14px;
+    color: #aab5be;
+    text-decoration: line-through;
+  }
+}
+
+// ── Адаптив ──────────────────────────────────────────────────────────────────
+@media (max-width: 767px) {
+  .popular-products {
+    padding: 28px 0 36px;
+
+    &__title {
+      font-size: 20px;
+    }
+  }
+
+  .pp-card__img {
+    height: 160px;
+  }
+}
+
+// ── Бейджи ────────────────────────────────────────────────────────────────────
+.pp-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 600;
+  white-space: nowrap;
+
+  &--image {
+    margin-right: 6px;
+  }
+
+  &--sale {
+    background: #ec4d76;
+    color: #fff;
+  }
+
+  &--hit {
+    background: #ff6b4a;
+    color: #fff;
+  }
+
+  &--new {
+    background: #4a6cf7;
+    color: #fff;
+  }
+}

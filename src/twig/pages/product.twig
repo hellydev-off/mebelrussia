@@ -1,0 +1,127 @@
+{% extends "layouts/base.twig" %}
+
+{% block title %}Название товара — {{ siteName }}{% endblock %}
+
+{% block content %}
+<div class="container" style="margin-top:20px; margin-bottom:40px;">
+
+  <ol class="breadcrumb">
+    <li><a href="/index.html">Главная</a></li>
+    <li><a href="/catalog.html">Каталог</a></li>
+    <li class="active">Название товара</li>
+  </ol>
+
+  {# Та же OC-логика, что и в каталоге. На карточке товара сайдбары обычно
+     отключены → #content = col-sm-12. Включение сайдбара в OC автоматически
+     пересчитает ширину. #}
+  {% set column_left  = column_left  ?? false %}
+  {% set column_right = column_right ?? false %}
+  {% if column_left and column_right %}
+    {% set content_class = 'col-sm-6' %}
+  {% elseif column_left or column_right %}
+    {% set content_class = 'col-sm-9' %}
+  {% else %}
+    {% set content_class = 'col-sm-12' %}
+  {% endif %}
+
+  <div class="row">
+
+    {# ── Левая колонка (в OC появляется при назначении модулей) ─────── #}
+    {% if column_left %}<div id="column-left" class="col-sm-3 hidden-xs"></div>{% endif %}
+
+    {# ── Основной контент ───────────────────────────────────────────── #}
+    <div id="content" class="{{ content_class }}">
+      <div class="row">
+
+        {# Галерея товара #}
+        <div class="col-sm-6">
+          <a href="#" class="thumbnail" style="margin-bottom:10px;">
+            <img src="https://placehold.co/500x400/e8e8e8/aaa?text=Фото+товара"
+                 alt="Фото товара" class="img-responsive">
+          </a>
+          <div class="row">
+            <div class="col-xs-4">
+              <a href="#" class="thumbnail">
+                <img src="https://placehold.co/150x120/ddd/aaa?text=Фото+1" class="img-responsive">
+              </a>
+            </div>
+            <div class="col-xs-4">
+              <a href="#" class="thumbnail">
+                <img src="https://placehold.co/150x120/ddd/aaa?text=Фото+2" class="img-responsive">
+              </a>
+            </div>
+            <div class="col-xs-4">
+              <a href="#" class="thumbnail">
+                <img src="https://placehold.co/150x120/ddd/aaa?text=Фото+3" class="img-responsive">
+              </a>
+            </div>
+          </div>
+        </div>
+
+        {# Информация о товаре #}
+        <div class="col-sm-6">
+          <h1 style="font-size:22px; margin-top:0;">Название товара</h1>
+
+          <ul class="list-unstyled" style="font-size:13px; color:#777; margin:10px 0;">
+            <li><strong>Артикул:</strong> SKU-001</li>
+            <li><strong>Наличие:</strong> <span class="label label-success">В наличии</span></li>
+            <li><strong>Бренд:</strong> <a href="#">Samsung</a></li>
+          </ul>
+
+          <hr>
+
+          <div class="price" style="font-size:26px; font-weight:700; color:#2c6fad; margin:15px 0;">
+            14 990 ₽
+            <small style="font-size:16px; color:#999; text-decoration:line-through; margin-left:8px;">
+              17 990 ₽
+            </small>
+          </div>
+
+          {# Количество #}
+          <div class="form-group">
+            <label>Количество:</label>
+            <div class="input-group" style="width:120px;">
+              <span class="input-group-btn">
+                <button class="btn btn-default qty-btn" data-action="minus" type="button">−</button>
+              </span>
+              <input type="number" class="form-control text-center" value="1" min="1">
+              <span class="input-group-btn">
+                <button class="btn btn-default qty-btn" data-action="plus" type="button">+</button>
+              </span>
+            </div>
+          </div>
+
+          <div style="margin-top:15px; display:flex; gap:8px; flex-wrap:wrap;">
+            <button type="button" class="btn btn-primary btn-lg">
+              <span class="glyphicon glyphicon-shopping-cart"></span> В корзину
+            </button>
+            <button type="button" class="btn btn-default btn-lg" title="В список желаний">
+              <span class="glyphicon glyphicon-heart"></span>
+            </button>
+            <button type="button" class="btn btn-default btn-lg" title="Сравнить">
+              <span class="glyphicon glyphicon-transfer"></span>
+            </button>
+          </div>
+
+          <hr>
+
+          {# Краткое описание #}
+          <div class="panel panel-default">
+            <div class="panel-heading"><strong>Описание</strong></div>
+            <div class="panel-body" style="font-size:13px; line-height:1.7;">
+              Краткое описание товара. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              Ut enim ad minim veniam, quis nostrud exercitation.
+            </div>
+          </div>
+        </div>
+
+      </div>{# /.row (product layout) #}
+    </div>{# /#content #}
+
+    {# ── Правая колонка (в OC появляется при назначении модулей) ────── #}
+    {% if column_right %}<div id="column-right" class="col-sm-3 hidden-xs"></div>{% endif %}
+
+  </div>{# /.row (OC grid) #}
+</div>{# /.container #}
+{% endblock %}
