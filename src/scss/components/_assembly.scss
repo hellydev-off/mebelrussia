@@ -1,9 +1,6 @@
 // ── Страница сборки мебели ────────────────────────────────────────────────────
 
-$as-teal: #3dacd2;
-$as-pink: #ec4d76;
-$as-pink-border: #f5c6d4;
-$as-feature-sep: rgba(255, 255, 255, 0.25);
+$as-buyer-photo-pct: 34%; // процент ширины фото в блоке "покупатель"
 
 .as-page {
   padding: 36px 0 60px;
@@ -38,7 +35,7 @@ $as-feature-sep: rgba(255, 255, 255, 0.25);
   padding: 36px 20px 32px;
 
   & + & {
-    border-left: 1px solid $as-feature-sep;
+    border-left: 1px solid $color-feature-sep;
   }
 
   &__icon {
@@ -73,12 +70,12 @@ $as-feature-sep: rgba(255, 255, 255, 0.25);
     font-weight: 400;
 
     strong {
-      color: $as-pink;
+      color: $color-pink;
       font-weight: 700;
     }
 
     a {
-      color: $as-teal;
+      color: $color-teal;
       text-decoration: underline;
       font-weight: 400;
     }
@@ -87,7 +84,7 @@ $as-feature-sep: rgba(255, 255, 255, 0.25);
 
 // ── Color utility ─────────────────────────────────────────────────────────────
 .as-pink {
-  color: $as-pink;
+  color: $color-pink;
   font-weight: 700;
 }
 
@@ -140,7 +137,7 @@ $as-feature-sep: rgba(255, 255, 255, 0.25);
   }
 
   &__price {
-    background: $as-pink;
+    background: $color-pink;
     color: rgba(255, 255, 255, 0.9);
     border-radius: 0 12px 12px 12px;
     padding: 12px 16px;
@@ -156,7 +153,7 @@ $as-feature-sep: rgba(255, 255, 255, 0.25);
       left: 0;
       width: 12px;
       height: 12px;
-      background: $as-pink;
+      background: $color-pink;
       clip-path: polygon(0 0, 100% 100%, 0 100%);
     }
 
@@ -169,7 +166,7 @@ $as-feature-sep: rgba(255, 255, 255, 0.25);
 
 // ── Shared price row (for 4-col block) ────────────────────────────────────────
 .as-shared-price {
-  background: $as-pink;
+  background: $color-pink;
   color: rgba(255, 255, 255, 0.9);
   border-radius: 0 12px 12px 12px;
   padding: 14px 18px;
@@ -185,7 +182,7 @@ $as-feature-sep: rgba(255, 255, 255, 0.25);
     left: 0;
     width: 12px;
     height: 12px;
-    background: $as-pink;
+    background: $color-pink;
     clip-path: polygon(0 0, 100% 100%, 0 100%);
   }
 
@@ -197,8 +194,6 @@ $as-feature-sep: rgba(255, 255, 255, 0.25);
 
 // ── Buyer info: photo + text ──────────────────────────────────────────────────
 // photo occupies 34% of the container; box is 70% right-aligned → overlaps photo by ~4%
-$as-buyer-photo-pct: 34%;
-
 .as-buyer {
   position: relative;
   margin: 36px 0 40px;
@@ -232,7 +227,7 @@ $as-buyer-photo-pct: 34%;
   &__box {
     width: 80%;
     margin-left: auto;
-    background: #72b0d7;
+    background: $color-blue;
     border-radius: 16px;
     padding: 28px 32px;
     position: relative;
@@ -279,7 +274,7 @@ $as-buyer-photo-pct: 34%;
     // item 4 стоит первым в строке → убираем border-left
     .as-feature:nth-child(4),
     .as-feature:nth-child(5) {
-      border-top: 1px solid $as-feature-sep;
+      border-top: 1px solid $color-feature-sep;
     }
     .as-feature:nth-child(4) {
       border-left: none;
@@ -311,10 +306,10 @@ $as-buyer-photo-pct: 34%;
       }
 
       &:nth-child(even) {
-        border-left: 1px solid $as-feature-sep;
+        border-left: 1px solid $color-feature-sep;
       }
       &:nth-child(n + 3) {
-        border-top: 1px solid $as-feature-sep;
+        border-top: 1px solid $color-feature-sep;
       }
       &:last-child:nth-child(odd) {
         grid-column: span 2;
@@ -367,7 +362,7 @@ $as-buyer-photo-pct: 34%;
     }
 
     .as-feature + .as-feature {
-      border-top: 1px solid $as-feature-sep;
+      border-top: 1px solid $color-feature-sep;
     }
   }
 

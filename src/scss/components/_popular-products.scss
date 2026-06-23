@@ -20,13 +20,13 @@
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  border: 1.5px solid #dde3e8;
+  border: 1.5px solid $border-nav-btn;
   background: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  color: #8496a1;
+  color: $text-muted;
   transition:
     border-color 0.2s,
     color 0.2s;
@@ -51,7 +51,7 @@
 
   &__media {
     position: relative;
-    background: #f2ede4;
+    background: $bg-card-media;
     padding: 20px 20px 16px;
   }
 
@@ -108,14 +108,14 @@
   &__stock {
     font-size: 12px;
     font-weight: 500;
-    color: #3cba6f;
+    color: $color-in-stock;
   }
 
   &__specs {
     list-style: none;
     padding: 0;
     margin: 0 0 16px;
-    border-top: 1px solid #f0f0f0;
+    border-top: 1px solid $border-lighter;
     padding-top: 10px;
 
     li {
@@ -129,7 +129,7 @@
 
   &__spec-name {
     flex-shrink: 0;
-    color: #8496a1;
+    color: $text-muted;
   }
 
   &__spec-val {
@@ -143,7 +143,7 @@
     content: '';
     display: inline-block;
     width: 80px;
-    border-bottom: 1px dotted #d0d8de;
+    border-bottom: 1px dotted $border-spec;
     margin: 0 4px -2px 4px;
   }
 
@@ -160,13 +160,13 @@
     color: $text-color;
 
     &--sale {
-      color: #ec4d76;
+      color: $color-pink;
     }
   }
 
   &__price-old {
     font-size: 14px;
-    color: #aab5be;
+    color: $color-placeholder;
     text-decoration: line-through;
   }
 }
@@ -201,17 +201,17 @@
   }
 
   &--sale {
-    background: #ec4d76;
+    background: $color-pink;
     color: #fff;
   }
 
   &--hit {
-    background: #ff6b4a;
+    background: $color-badge-hit;
     color: #fff;
   }
 
   &--new {
-    background: #4a6cf7;
+    background: $color-badge-new;
     color: #fff;
   }
 }

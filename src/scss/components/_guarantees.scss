@@ -1,7 +1,5 @@
 // ── Гарантии ──────────────────────────────────────────────────────────────────
 
-$gr-banner-bg: #72b0d7;
-
 // ── Page wrapper ──────────────────────────────────────────────────────────────
 .gr-page {
   padding: 36px 0 60px;
@@ -13,7 +11,7 @@ $gr-banner-bg: #72b0d7;
   grid-template-columns: 200px 1fr;
   gap: 0;
   align-items: center;
-  background: #eef6fb;
+  background: $bg-blue-lighter;
   border-radius: 20px;
   padding: 32px 40px;
   margin-bottom: 60px;
@@ -88,7 +86,7 @@ $gr-banner-bg: #72b0d7;
 
 // ── Phone banner ──────────────────────────────────────────────────────────────
 .gr-phone-banner {
-  background: $gr-banner-bg;
+  background: $color-blue;
   border-radius: 20px;
   padding: 28px 40px 36px;
   margin-top: -160px;

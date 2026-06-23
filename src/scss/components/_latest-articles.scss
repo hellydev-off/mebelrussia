@@ -14,7 +14,7 @@
     display: inline-flex;
     align-items: center;
     padding: 10px 24px;
-    background: #3dacd2;
+    background: $color-teal;
     color: #fff;
     font-size: 14px;
     font-weight: 600;
@@ -23,7 +23,7 @@
     transition: background 0.2s;
 
     &:hover {
-      background: darken(#3dacd2, 8%);
+      background: darken($color-teal, 8%);
       color: #fff;
       text-decoration: none;
     }

@@ -21,7 +21,7 @@
   margin: 0 0 16px;
 
   a {
-    color: #3dacd2;
+    color: $color-teal;
     text-decoration: underline;
   }
 }
@@ -44,7 +44,7 @@
 }
 
 .about-pink-box {
-  background: #ec4d76;
+  background: $color-pink;
   border-radius: 20px;
   padding: 28px 36px;
   margin-top: -160px;
@@ -77,7 +77,7 @@
   display: flex;
   gap: 24px;
   align-items: flex-start;
-  border: 1.5px solid #d0dce6;
+  border: 1.5px solid $border-quote;
   border-radius: 20px 20px 0 20px;
   padding: 32px 36px;
   margin-right: 40px;
@@ -93,7 +93,7 @@
     right: 0;
     width: 0;
     height: 0;
-    border-top: 60px solid #d0dce6;
+    border-top: 60px solid $border-quote;
     border-left: 60px solid transparent;
   }
 
@@ -112,7 +112,7 @@
   &__marks {
     font-size: 80px;
     line-height: 0.8;
-    color: #3dacd2;
+    color: $color-teal;
     font-family: Georgia, serif;
     font-weight: 700;
     flex-shrink: 0;
@@ -128,7 +128,7 @@
 }
 
 .about-reply {
-  background: #3dacd2;
+  background: $color-teal;
   border-radius: 0px 20px 20px 20px;
   padding: 28px 40px;
   position: relative;
@@ -165,7 +165,7 @@
 }
 
 .about-teal-box {
-  background: #3dacd2;
+  background: $color-teal;
   border-radius: 20px;
   padding: 28px 36px;
   margin-top: -110px;
@@ -196,7 +196,7 @@
 }
 
 .about-feature {
-  background: #f0f7fc;
+  background: $bg-about-feature;
   border-radius: 16px;
   padding: 24px;
 
@@ -213,7 +213,7 @@
   &__title {
     font-size: 18px;
     font-weight: 800;
-    color: #3dacd2;
+    color: $color-teal;
     margin: 0 0 8px;
     text-decoration: underline;
   }
@@ -222,7 +222,7 @@
     font-size: 16px;
     line-height: 1.5;
     font-weight: 400;
-    color: #8496a1;
+    color: $text-muted;
     margin: 0;
   }
 }

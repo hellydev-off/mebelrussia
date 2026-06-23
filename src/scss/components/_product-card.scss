@@ -3,14 +3,14 @@
 .product-thumb {
   margin-bottom: 20px;
   background: #fff;
-  border: 1px solid #e8e8e8;
+  border: 1px solid $border-default;
   border-radius: 4px;
   overflow: hidden;
   transition: box-shadow 0.25s, border-color 0.25s;
 
   &:hover {
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    border-color: #ccc;
+    border-color: $border-hover;
   }
 
   .image {
@@ -48,7 +48,7 @@
     }
 
     .rating {
-      color: #f39c12;
+      color: $color-rating;
       margin-bottom: 6px;
       font-size: 13px;
     }
@@ -62,7 +62,7 @@
       .price-old {
         font-weight: 400;
         font-size: 13px;
-        color: #999;
+        color: $color-price-old;
         text-decoration: line-through;
         margin-right: 6px;
       }
@@ -81,6 +81,80 @@
         font-size: 13px;
       }
     }
+  }
+}
+
+// ── Тулбар сортировки/отображения ────────────────────────────────────────────
+.product-filter {
+  background: $bg-light;
+  border: 1px solid $border-light;
+  border-radius: 4px;
+  padding: 10px 15px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+
+  .display-options {
+    display: flex;
+    gap: 5px;
+
+    .btn-default.active {
+      background: $brand-primary;
+      color: #fff;
+      border-color: $brand-primary;
+    }
+  }
+
+  .sort-group {
+    margin-left: auto;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+
+    label { margin: 0; white-space: nowrap; }
+    select { width: auto; }
+  }
+}
+
+// ── Боковые колонки (категории, фильтры) ──────────────────────────────────────
+#column-left,
+#column-right {
+  .list-group-item {
+    font-size: 13px;
+    padding: 8px 15px;
+
+    &.active {
+      background: $brand-primary;
+      border-color: $brand-primary;
+    }
+  }
+
+  h5 {
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #555;
+    margin-bottom: 10px;
+  }
+}
+
+// ── Пагинация ─────────────────────────────────────────────────────────────────
+.pagination-wrapper {
+  text-align: center;
+  margin-top: 20px;
+
+  .pagination > li > a,
+  .pagination > li > span {
+    color: $brand-primary;
+    border-color: #ddd;
+  }
+
+  .pagination > .active > a,
+  .pagination > .active > span {
+    background: $brand-primary;
+    border-color: $brand-primary;
   }
 }
 

@@ -1,8 +1,5 @@
 // ── Страница рассрочки ────────────────────────────────────────────────────────
 
-$inst-pink: #ec4d76;
-$inst-teal: #3dacd2;
-
 // ── Page wrapper ──────────────────────────────────────────────────────────────
 .inst-page {
   padding: 36px 0 60px;
@@ -41,13 +38,13 @@ $inst-teal: #3dacd2;
   &__pink {
     font-size: 16px;
     font-weight: 600;
-    color: $inst-pink;
+    color: $color-pink;
   }
 
   &__teal {
     font-size: 16px;
     font-weight: 600;
-    color: $inst-teal;
+    color: $color-teal;
   }
 }
 
@@ -88,14 +85,14 @@ $inst-teal: #3dacd2;
   &__num {
     font-size: 13px;
     font-weight: 500;
-    color: $inst-pink;
+    color: $color-pink;
     margin: 0 0 6px;
   }
 
   &__title {
     font-size: 16px;
     font-weight: 700;
-    color: $inst-teal;
+    color: $color-teal;
     margin: 0 0 10px;
     line-height: 1.35;
   }
@@ -121,7 +118,7 @@ $inst-teal: #3dacd2;
   gap: 24px;
   padding: 32px 36px;
   background: #fff;
-  border: 1px solid #e8e8e8;
+  border: 1px solid $border-default;
   border-radius: 20px;
 }
 
@@ -187,7 +184,7 @@ $inst-teal: #3dacd2;
         width: 10px;
         height: 10px;
         border-radius: 50%;
-        border: 2px solid $inst-pink;
+        border: 2px solid $color-pink;
       }
 
       &:last-child {
@@ -244,7 +241,7 @@ $inst-teal: #3dacd2;
     &__content {
       position: static;
       height: auto;
-      border: 1px solid $inst-pink;
+      border: 1px solid $color-pink;
       border-radius: 16px 16px 16px 0;
       padding: 16px 24px;
       flex-wrap: wrap;

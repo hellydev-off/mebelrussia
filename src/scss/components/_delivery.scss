@@ -1,9 +1,5 @@
 // ── Страница доставки ─────────────────────────────────────────────────────────
 
-$dl-teal: #3dacd2;
-$dl-pink: #ec4d76;
-$dl-pink-border: #f5c6d4;
-
 // ── Page wrapper ──────────────────────────────────────────────────────────────
 .dl-page {
   padding: 36px 0 60px;
@@ -45,7 +41,7 @@ $dl-pink-border: #f5c6d4;
   &__price {
     font-size: 32px;
     font-weight: 700;
-    color: $dl-pink;
+    color: $color-pink;
     margin: 0 0 4px;
     line-height: 1.2;
   }
@@ -53,17 +49,17 @@ $dl-pink-border: #f5c6d4;
   &__sub {
     font-size: 16px;
     font-weight: 600;
-    color: $dl-pink;
+    color: $color-pink;
     margin: 0;
   }
 }
 
 // ── Цветовые утилиты ─────────────────────────────────────────────────────────
 .dl-teal {
-  color: $dl-teal;
+  color: $color-teal;
 }
 .dl-pink {
-  color: $dl-pink;
+  color: $color-pink;
 }
 
 // ── H2 section titles ─────────────────────────────────────────────────────────
@@ -127,10 +123,10 @@ $dl-pink-border: #f5c6d4;
     line-height: 1.2;
 
     &--teal {
-      color: $dl-teal;
+      color: $color-teal;
     }
     &--pink {
-      color: $dl-pink;
+      color: $color-pink;
     }
 
     sub {
@@ -153,14 +149,14 @@ $dl-pink-border: #f5c6d4;
   display: flex;
   align-items: center;
   gap: 12px;
-  border: 1px solid $dl-pink-border;
+  border: 1px solid $border-pink;
   border-radius: 40px;
   padding: 12px 20px;
   text-align: left;
 
   &__icon {
     flex-shrink: 0;
-    color: $dl-pink;
+    color: $color-pink;
     display: flex;
     align-items: center;
   }
@@ -178,14 +174,14 @@ $dl-pink-border: #f5c6d4;
   align-items: center;
   gap: 16px;
   background: #fff;
-  border: 1px solid $dl-pink-border;
+  border: 1px solid $border-pink;
   border-radius: 16px;
   padding: 20px 28px;
   margin-bottom: 28px;
 
   &__icon {
     flex-shrink: 0;
-    color: $dl-pink;
+    color: $color-pink;
     display: flex;
     align-items: center;
   }
@@ -193,7 +189,7 @@ $dl-pink-border: #f5c6d4;
   &__text {
     font-size: 18px;
     font-weight: 600;
-    color: $dl-pink;
+    color: $color-pink;
     line-height: 1.55;
   }
 }
@@ -220,7 +216,7 @@ $dl-pink-border: #f5c6d4;
       width: 10px;
       height: 10px;
       border-radius: 50%;
-      border: 2px solid $dl-pink;
+      border: 2px solid $color-pink;
       background: transparent;
     }
 
@@ -248,16 +244,16 @@ $dl-pink-border: #f5c6d4;
   &__text {
     font-size: 15px;
     font-weight: 500;
-    color: $dl-pink;
+    color: $color-pink;
     text-decoration: underline;
 
     &:hover {
-      color: darken($dl-teal, 12%);
+      color: darken($color-teal, 12%);
     }
   }
 
   &:hover .dl-pdf-link__text {
-    color: darken($dl-teal, 12%);
+    color: darken($color-teal, 12%);
   }
 }
 
@@ -299,7 +295,7 @@ $dl-pink-border: #f5c6d4;
 
     .dl-step + .dl-step {
       border-left: none;
-      border-top: 1px solid #e8e8e8;
+      border-top: 1px solid $border-default;
     }
   }
 
@@ -312,7 +308,7 @@ $dl-pink-border: #f5c6d4;
 
     &:first-child {
       border-right: none;
-      border-bottom: 1px solid #e8e8e8;
+      border-bottom: 1px solid $border-default;
     }
   }
 

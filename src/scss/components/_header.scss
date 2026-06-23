@@ -69,11 +69,11 @@
   }
 
   &__sale {
-    color: #ec4d76 !important;
+    color: $color-pink !important;
     font-weight: 500;
 
     &:hover {
-      color: darken(#ec4d76, 10%) !important;
+      color: darken($color-pink, 10%) !important;
     }
   }
 
@@ -146,7 +146,7 @@
     top: calc(100% + 8px);
     left: 0;
     background: #fff;
-    border: 1px solid #e8e8e8;
+    border: 1px solid $border-default;
     border-radius: 10px;
     box-shadow: 0 6px 24px rgba(0, 0, 0, 0.12);
     min-width: 190px;
@@ -162,7 +162,7 @@
       text-decoration: none;
 
       &:hover {
-        background: #f5f8fa;
+        background: $bg-hover;
         color: $brand-primary;
       }
     }
@@ -183,7 +183,7 @@
     font-size: 15px !important;
 
     &:hover {
-      background: #f5f8fa;
+      background: $bg-hover;
       color: $brand-primary;
     }
   }
@@ -208,7 +208,7 @@
 
   &__divider {
     height: 1px;
-    background: #e8e8e8;
+    background: $border-default;
     margin: 6px 0;
   }
 
@@ -225,7 +225,7 @@
     span {
       display: block;
       font-size: 13px;
-      color: #8496a1;
+      color: $text-muted;
       margin-top: 3px;
       line-height: 1.4;
     }
@@ -238,7 +238,7 @@
     color: $text-color !important;
 
     &:hover {
-      background: #f5f8fa;
+      background: $bg-hover;
       color: $brand-primary !important;
     }
   }
@@ -272,7 +272,7 @@
   align-items: center;
   gap: 10px;
   flex-shrink: 0;
-  background: #3dacd2;
+  background: $color-teal;
   color: #fff;
   border: none;
   border-radius: 12px;
@@ -286,7 +286,7 @@
   transition: background 0.15s;
 
   &:hover {
-    background: darken(#3dacd2, 8%);
+    background: darken($color-teal, 8%);
   }
 }
 
@@ -294,7 +294,7 @@
   flex: 1;
   display: flex;
   align-items: center;
-  background: #eaf2f8;
+  background: $bg-blue-light;
   border-radius: 12px;
   height: 52px;
   padding: 0 16px;
@@ -310,7 +310,7 @@
     color: $text-color;
 
     &::placeholder {
-      color: #aab5be;
+      color: $color-placeholder;
     }
   }
 
@@ -320,7 +320,7 @@
     border: none;
     padding: 0;
     cursor: pointer;
-    color: #8496a1;
+    color: $text-muted;
     display: flex;
     align-items: center;
     line-height: 1;
@@ -344,7 +344,7 @@
   align-items: center;
   gap: 4px;
   text-decoration: none;
-  color: #8496a1;
+  color: $text-muted;
   font-size: 14px;
   font-weight: 600;
   line-height: 1;
@@ -390,7 +390,7 @@ body.scrolled #header {
       height: 34px;
       justify-content: center;
       border-radius: 50%;
-      background: #eaf2f8;
+      background: $bg-blue-light;
       color: $brand-primary;
     }
   }

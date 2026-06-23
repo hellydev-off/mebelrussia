@@ -1,12 +1,5 @@
 // ── Страница оплаты ───────────────────────────────────────────────────────────
 
-$py-teal: #3dacd2;
-$py-pink: #ec4d76;
-$py-pink-bg: #fdf0f3;
-$py-pink-border: #f5c6d4;
-$py-blue-bg: #eef6fb;
-$py-blue-border: #72b0d7;
-
 // ── Page wrapper ──────────────────────────────────────────────────────────────
 .py-page {
   padding: 36px 0 60px;
@@ -21,7 +14,7 @@ $py-blue-border: #72b0d7;
   display: flex;
   align-items: center;
   gap: 16px;
-  background: $py-pink-bg;
+  background: $bg-pink-light;
   // закруглены все углы кроме нижнего левого — там крючок
   border-radius: 16px 16px 16px 0;
   padding: 22px 32px;
@@ -36,7 +29,7 @@ $py-blue-border: #72b0d7;
     left: 0;
     width: 24px;
     height: 22px;
-    background: $py-pink-bg;
+    background: $bg-pink-light;
     clip-path: polygon(0 0, 100% 0, 0 100%);
   }
 
@@ -50,7 +43,7 @@ $py-blue-border: #72b0d7;
   &__text {
     font-size: 18px;
     font-weight: 700;
-    color: $py-pink;
+    color: $color-pink;
   }
 }
 
@@ -58,7 +51,7 @@ $py-blue-border: #72b0d7;
 .py-section-title {
   font-size: 22px;
   font-weight: 700;
-  color: $py-pink;
+  color: $color-pink;
   margin: 0 0 24px;
 }
 
@@ -189,18 +182,18 @@ $py-blue-border: #72b0d7;
   min-width: 44px;
   height: 44px;
   border-radius: 12px;
-  border: 2px solid $py-teal;
+  border: 2px solid $color-teal;
   background: #fff;
   font-size: 18px;
   font-weight: 700;
-  color: $py-teal;
+  color: $color-teal;
   flex-shrink: 0;
 }
 
 .py-return-title {
   font-size: 24px;
   font-weight: 700;
-  color: $py-teal;
+  color: $color-teal;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   line-height: 1.4;
@@ -244,7 +237,7 @@ $py-blue-border: #72b0d7;
   align-items: flex-start;
   gap: 14px;
   background: #fff;
-  border: 1px solid $py-pink-border;
+  border: 1px solid $border-pink;
   border-radius: 16px;
   padding: 20px 24px;
   margin: 24px 0 40px;
@@ -254,7 +247,7 @@ $py-blue-border: #72b0d7;
   }
 
   &__icon {
-    color: $py-pink;
+    color: $color-pink;
     flex-shrink: 0;
     display: flex;
     margin-top: 1px;
@@ -263,10 +256,10 @@ $py-blue-border: #72b0d7;
   &__text {
     font-size: 18px;
     line-height: 1.65;
-    color: $py-pink;
+    color: $color-pink;
 
     strong {
-      color: $py-pink;
+      color: $color-pink;
     }
   }
 }
@@ -293,7 +286,7 @@ $py-blue-border: #72b0d7;
       width: 10px;
       height: 10px;
       border-radius: 50%;
-      border: 2px solid $py-pink;
+      border: 2px solid $color-pink;
       background: transparent;
     }
 
@@ -318,7 +311,7 @@ $py-blue-border: #72b0d7;
   }
 
   &__img-col {
-    background: #f0f4f8;
+    background: $bg-ssl;
     border-radius: 20px;
     padding: 20px;
     display: flex;
@@ -339,7 +332,7 @@ $py-blue-border: #72b0d7;
   display: flex;
   align-items: flex-start;
   gap: 16px;
-  background: rgb(234, 242, 248);
+  background: $bg-blue-light;
   // все углы скруглены, кроме верхнего левого — там крючок
   border-radius: 0 16px 16px 16px;
   padding: 24px 28px;
@@ -355,14 +348,14 @@ $py-blue-border: #72b0d7;
     left: 0;
     width: 20px;
     height: 20px;
-    background: rgb(234, 242, 248);
+    background: $bg-blue-light;
     clip-path: polygon(0 0, 0 100%, 100% 100%);
   }
 
   &__asterisk {
     font-size: 22px;
     font-weight: 700;
-    color: $py-pink;
+    color: $color-pink;
     flex-shrink: 0;
     line-height: 1.4;
   }

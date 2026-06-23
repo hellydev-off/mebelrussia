@@ -1,10 +1,5 @@
 // ── Страница контактов ────────────────────────────────────────────────────────
 
-$ct-teal: #3dacd2;
-$ct-dark-bg: #5f9ec5;
-$ct-label-mute: rgba(255, 255, 255, 0.65);
-$ct-input-bg: #f0f5fb;
-
 // ── Page wrapper ──────────────────────────────────────────────────────────────
 .ct-page {
   padding: 36px 0 60px;
@@ -36,7 +31,7 @@ $ct-input-bg: #f0f5fb;
 
 .ct-store {
   padding: 24px 0;
-  border-bottom: 1px solid #e8edf3;
+  border-bottom: 1px solid $border-segment;
 
   &:first-child {
     padding-top: 0;
@@ -76,7 +71,7 @@ $ct-input-bg: #f0f5fb;
 
   &__hours {
     font-size: 13px;
-    color: #8a9ab5;
+    color: $text-hours;
     line-height: 1.4;
   }
 
@@ -137,7 +132,7 @@ $ct-input-bg: #f0f5fb;
 
     &:hover,
     &:focus {
-      color: $ct-teal;
+      color: $color-teal;
       text-decoration: none;
     }
   }
@@ -171,7 +166,7 @@ $ct-input-bg: #f0f5fb;
 }
 
 .ct-callback-block {
-  background: #eaf2f8;
+  background: $bg-blue-light;
   border-radius: 20px;
   padding: 28px 32px;
   display: flex;
@@ -181,7 +176,7 @@ $ct-input-bg: #f0f5fb;
 // ── Requisites table ──────────────────────────────────────────────────────────
 .ct-req-table {
   flex: 1;
-  background: $ct-dark-bg;
+  background: $color-blue-dark;
   border-radius: 20px;
   overflow: hidden;
 
@@ -200,7 +195,7 @@ $ct-input-bg: #f0f5fb;
   &__label {
     font-size: 14px;
     font-weight: 500;
-    color: $ct-label-mute;
+    color: $color-white-muted;
     min-width: 80px;
     flex-shrink: 0;
   }
@@ -265,7 +260,7 @@ $ct-input-bg: #f0f5fb;
     }
 
     &:focus {
-      box-shadow: 0 0 0 2px rgba($ct-teal, 0.35);
+      box-shadow: 0 0 0 2px rgba($color-teal, 0.35);
     }
   }
 
@@ -308,7 +303,7 @@ $ct-input-bg: #f0f5fb;
     margin-top: 2px;
     width: 18px;
     height: 18px;
-    accent-color: $ct-teal;
+    accent-color: $color-teal;
     cursor: pointer;
   }
 
@@ -319,12 +314,12 @@ $ct-input-bg: #f0f5fb;
   }
 
   &__check-link {
-    color: $ct-teal;
+    color: $color-teal;
     text-decoration: underline;
 
     &:hover,
     &:focus {
-      color: darken($ct-teal, 10%);
+      color: darken($color-teal, 10%);
       text-decoration: none;
     }
   }
@@ -337,7 +332,7 @@ $ct-input-bg: #f0f5fb;
     gap: 10px;
     width: 100%;
     padding: 16px 24px;
-    background: linear-gradient(90deg, #3dacd2 0%, #52c5ed 100%);
+    background: linear-gradient(90deg, $color-teal 0%, #52c5ed 100%);
     border: none;
     border-radius: 12px;
     font-size: 16px;

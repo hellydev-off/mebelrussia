@@ -1,32 +1,88 @@
-// ── Цвета ────────────────────────────────────────────────────────────────────
-$brand-primary:   #2c6fad;
-$brand-secondary: #e74c3c;
-$text-color:      #333333;
-$link-color:      $brand-primary;
+// ── Бренд (Bootstrap overrides) ──────────────────────────────────────────────
+$brand-primary: #1565c0; // ↑ насыщенность: было #2c6fad
+$brand-secondary: #dc2626; // ↑ насыщенность: было #e74c3c
+$text-color: #333333;
+$link-color: $brand-primary;
+
+// ── Проектная палитра ─────────────────────────────────────────────────────────
+$color-teal: #00b4d8; // ↑ насыщенность: было #3dacd2
+$color-pink: #e8134e; // ↑ насыщенность: было #ec4d76
+$color-blue: #4aa8d8; // ↑ насыщенность: было #72b0d7
+$color-blue-dark: #2e7eb8; // ↑ насыщенность: было #5f9ec5
+
+// ── Оттенки текста ────────────────────────────────────────────────────────────
+$text-heading: #111111;
+$text-muted: #8496a1;
+$text-light: #666666;
+$text-lighter: #888888;
+$text-hours: #8a9ab5;
+$text-nav: #51606b;
+
+// ── Функциональные цвета ──────────────────────────────────────────────────────
+$color-price-old: #999999;
+$color-rating: #f39c12;
+$color-in-stock: #3cba6f;
+$color-badge-hit: #ff6b4a;
+$color-badge-new: #4a6cf7;
+$color-vk: #0077ff;
+$color-white-muted: rgba(255, 255, 255, 0.65);
+$color-feature-sep: rgba(255, 255, 255, 0.25);
+
+// ── Фоны ──────────────────────────────────────────────────────────────────────
+$bg-white: #ffffff;
+$bg-light: #f8f8f8;
+$bg-blue-light: #b0dcf0; // поиск, бургер, форма обратного звонка
+$bg-blue-lighter: #c2e4f5; // intro-блоки, gr/py-blue-bg
+$bg-about-feature: #c8e6f8; // карточки преимуществ (about)
+$bg-mailing: #97d1eb; // секция рассылки
+$bg-pink-light: #f7b0c4; // уведомление (оплата)
+$bg-card-media: #f2ede4; // медиа-зона карточки pp-card
+$bg-hover: #f5f8fa; // hover в выпадающих меню
+$bg-submenu: #f7fafc; // мобильное подменю
+$bg-hover-submenu: #daeef8; // hover пункта мобильного подменю
+$bg-ssl: #c4e2f5; // блок SSL (оплата)
+
+// ── Плейсхолдеры ──────────────────────────────────────────────────────────────
+$color-placeholder: #aab5be;
+$color-placeholder-dark: #b0c4ce;
+
+// ── Границы ───────────────────────────────────────────────────────────────────
+$border-default: #e8e8e8;
+$border-light: #e5e5e5;
+$border-lighter: #f0f0f0;
+$border-nav: #eeeeee;
+$border-pink: #f5c6d4;
+$border-hover: #cccccc;
+$border-nav-btn: #dde3e8;
+$border-quote: #d0dce6;
+$border-spec: #d0d8de;
+$border-toggle: #c0d4de;
+$border-toggle-wrap: #d4e8f2;
+$border-segment: #e8edf3;
 
 // ── Типографика ───────────────────────────────────────────────────────────────
 $font-family-base: 'Manrope', Arial, 'Helvetica Neue', sans-serif;
-$font-size-base:   14px;
+$font-size-base: 14px;
 $line-height-base: 1.6;
 
-// ── Сетка (Bootstrap 3 дефолт + расширенный контейнер) ───────────────────────
-$grid-columns:             12;
-$grid-gutter-width:        30px;
+// ── Сетка (Bootstrap 3) ───────────────────────────────────────────────────────
+$grid-columns: 12;
+$grid-gutter-width: 30px;
 $container-large-desktop: (1170px + $grid-gutter-width);
 
 // ── Навбар ────────────────────────────────────────────────────────────────────
-$navbar-height:          50px;
-$navbar-default-bg:      #ffffff;
-$navbar-default-color:   $text-color;
-$navbar-default-border:  #e5e5e5;
-$navbar-default-link-color:        $text-color;
-$navbar-default-link-hover-color:  $brand-primary;
+$navbar-height: 50px;
+$navbar-default-bg: $bg-white;
+$navbar-default-color: $text-color;
+$navbar-default-border: $border-light;
+$navbar-default-link-color: $text-color;
+$navbar-default-link-hover-color: $brand-primary;
 $navbar-default-link-active-color: $brand-primary;
 
-// ── Кнопки ───────────────────────────────────────────────────────────────────
-$btn-primary-bg:     $brand-primary;
+// ── Кнопки ────────────────────────────────────────────────────────────────────
+$btn-primary-bg: $brand-primary;
 $btn-primary-border: darken($brand-primary, 5%);
 
-// ── Хлебные крошки ───────────────────────────────────────────────────────────
-$breadcrumb-bg:        #f8f8f8;
+// ── Хлебные крошки ────────────────────────────────────────────────────────────
+$breadcrumb-bg: $bg-light;
 $breadcrumb-separator: '›';
